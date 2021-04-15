@@ -18,7 +18,6 @@ int pairsSumInRotatedArray(int arr[], int n, int x){
     int cont = 0;
 
     while(l != h){
-        cout<<l<<" "<<h<<endl;
         if(arr[h] + arr[l] == x){
             cont++;
 
