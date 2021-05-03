@@ -4,12 +4,6 @@
 
 using namespace std;
 
-Node* createNode(int key){
-    Node* newNode = new Node;
-    newNode->key = key;
-    newNode->left = newNode->right = nullptr;
-    return newNode;
-}
 
 Node* insertNode(Node* root, int value){
     queue<Node*> q;

@@ -1,19 +1,8 @@
 #include<iostream>
 #include<queue>
+#include "tree.h"
 
 using namespace std;
-
-struct Node{
-    int key;
-    Node *left, *right;
-};
-
-struct Node* newNode(int key){
-    Node * tmp = new Node;
-    tmp->key=key;
-    tmp->left = tmp->right = nullptr;
-    return tmp;
-}
 
 
 void inorder(Node* root){
@@ -93,13 +82,13 @@ Node* deletion(Node* root, int key){
 
 
 int main(){
-    Node* root = newNode(10);
-    root->left = newNode(11);
-    root->left->left = newNode(7);
-    root->left->right = newNode(12);
-    root->right = newNode(9);
-    root->right->left = newNode(15);
-    root->right->right = newNode(8);
+    Node* root = createNode(10);
+    root->left = createNode(11);
+    root->left->left = createNode(7);
+    root->left->right = createNode(12);
+    root->right = createNode(9);
+    root->right->left = createNode(15);
+    root->right->right = createNode(8);
 
     inorder(root);
 
