@@ -25,4 +25,22 @@ void inOrder(Node* root){
 
 }
 
+void preOrder(Node* root){
+    if(!root)
+        return;
+
+    cout<<root->key;
+    preOrder(root->left);
+    preOrder(root->right);
+}
+
+void postOrder(Node* root){
+    if(!root)
+        return;
+
+    postOrder(root->left);
+    postOrder(root->right);
+    cout<<root->key;
+}
+
 
