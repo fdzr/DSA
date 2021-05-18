@@ -6,7 +6,6 @@ using namespace std;
 
 
 void findSmallestAnd2Smallest(int arr[], int n){
-    int min = INT_MAX;
     int smallest, second_smallest;
     smallest = second_smallest = INT_MAX;
 
