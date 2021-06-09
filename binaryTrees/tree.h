@@ -15,6 +15,14 @@ Node* createNode(int key){
     return tmp;
 }
 
+int isLeaf(Node* node){
+    if(node == nullptr)
+        return 0;
+    if(node->left == nullptr && node->right == nullptr)
+        return 1;
+    return 0;
+}
+
 
 void inOrder(Node* root){
     if(!root)
