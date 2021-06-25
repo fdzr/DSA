@@ -14,7 +14,7 @@ class MinHeap{
     
     public:
         MinHeap(int c);
-        void Heapify(int);
+        void MinHeapify(int);
         int extractMin();
         void decreaseKey(int i, int new_val);
         void deleteKey(int i);
