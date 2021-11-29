@@ -22,9 +22,10 @@ int main(){
     third->data = 3;
     third->next = nullptr;
 
-    auto tmp = head;
-
     aux::pushAtFront(&head, 0);
+    aux::insertAfter(second, 5);
+    aux::insertAtEnd(&head, 6);
+
 
     while(head != nullptr){
         cout<<head->data<<endl;
