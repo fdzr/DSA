@@ -1,4 +1,5 @@
 #include <iostream>
+#include "auxiliary_functions/aux_functions.h"
 #include "node/node.h"
 
 using namespace std;
@@ -23,9 +24,11 @@ int main(){
 
     auto tmp = head;
 
-    while(tmp != nullptr){
-        cout<<tmp->data<<endl;
-        tmp = tmp->next;
+    aux::pushAtFront(&head, 0);
+
+    while(head != nullptr){
+        cout<<head->data<<endl;
+        head = head->next;
     }
 
 
