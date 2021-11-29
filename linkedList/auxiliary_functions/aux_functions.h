@@ -1,4 +1,4 @@
-#include <iostream>
+#include <memory>
 #include "../node/node.h"
 
 using namespace std;
@@ -7,6 +7,15 @@ using namespace std;
 #define AUX_FUNCTIONS_H
 
 namespace aux{
+    void print(Node** ref){
+        Node* head{*ref};
+        while(head != nullptr){
+            cout<<head->data<<" ";
+            head = head->next;
+        }
+        cout<<endl;
+    }
+
     void pushAtFront(Node** ref, int data){
         Node* new_node = new Node();
         new_node->data = data;   
@@ -41,6 +50,30 @@ namespace aux{
             tmp = tmp->next;
 
         tmp->next = actual;
+    }
+
+    void deleteNode(Node** ref, int key){
+        Node* prev = nullptr;
+        Node* head = *ref;
+
+        if(head->data == key){
+            *ref = head->next;
+            delete head;
+            return;
+        }
+        
+        while(head != nullptr && head->data != key){
+            prev = head;
+            head = head->next;
+        }
+
+        if(head == nullptr){
+            cout<<"Key not founded";
+            return;
+        }
+
+        prev->next = head->next;
+        delete head;
     }
 }
 

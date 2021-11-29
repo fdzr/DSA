@@ -26,12 +26,17 @@ int main(){
     aux::insertAfter(second, 5);
     aux::insertAtEnd(&head, 6);
 
+    aux::print(&head);
+    aux::deleteNode(&head, 0);
+    aux::print(&head);
 
-    while(head != nullptr){
-        cout<<head->data<<endl;
-        head = head->next;
-    }
+    aux::deleteNode(&head, 6);
+    aux::print(&head);
 
+    aux::deleteNode(&head, 5);
+    aux::print(&head);
+    
+    aux::deleteNode(&head, 10);
 
 
     return 0;
