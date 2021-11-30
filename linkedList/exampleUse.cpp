@@ -37,6 +37,18 @@ int main(){
     aux::print(&head);
     
     aux::deleteNode(&head, 10);
+    aux::print(&head);
+
+    aux::deleteNodeAtGivenPosition(&head, 0);
+    aux::print(&head);
+
+    aux::print(&head);
+    aux::deleteNodeAtGivenPosition(&head, 2);
+    aux::print(&head);
+
+    aux::print(&head);
+    aux::deleteNodeAtGivenPosition(&head, 1);
+    aux::print(&head);
 
 
     return 0;

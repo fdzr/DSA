@@ -68,12 +68,46 @@ namespace aux{
         }
 
         if(head == nullptr){
-            cout<<"Key not founded";
+            cout<<"Key not founded: "<<key<<endl;
             return;
         }
 
         prev->next = head->next;
         delete head;
+    }
+
+    void deleteNodeAtGivenPosition(Node** ref, int pos){
+        Node* head = *ref;
+        Node* prev = nullptr;
+
+        if(pos == 0){
+            (*ref) = head->next;
+            delete head;
+            return;
+        }
+
+        int cont = 0;
+        while(head != nullptr && cont != pos){
+            prev = head;
+            head = head->next;
+            cont++;
+        }
+
+        if(cont < pos){
+            cout<<"Size of the linkedlist is smaller than the position"<<endl;
+            return;
+        }
+        else {
+            if(head){
+               prev->next = head->next;
+                delete head; 
+            }
+            else{
+                prev->next = nullptr;
+                delete head;
+            }
+            return;
+        }
     }
 }
 
