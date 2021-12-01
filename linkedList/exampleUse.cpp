@@ -27,27 +27,30 @@ int main(){
     aux::insertAtEnd(&head, 6);
 
     aux::print(&head);
-    aux::deleteNode(&head, 0);
-    aux::print(&head);
+    // aux::deleteNode(&head, 0);
+    // aux::print(&head);
 
-    aux::deleteNode(&head, 6);
-    aux::print(&head);
+    // aux::deleteNode(&head, 6);
+    // aux::print(&head);
 
-    aux::deleteNode(&head, 5);
-    aux::print(&head);
+    // aux::deleteNode(&head, 5);
+    // aux::print(&head);
     
-    aux::deleteNode(&head, 10);
-    aux::print(&head);
+    // aux::deleteNode(&head, 10);
+    // aux::print(&head);
 
-    aux::deleteNodeAtGivenPosition(&head, 0);
-    aux::print(&head);
+    // aux::deleteNodeAtGivenPosition(&head, 0);
+    // aux::print(&head);
 
-    aux::print(&head);
-    aux::deleteNodeAtGivenPosition(&head, 2);
-    aux::print(&head);
+    // aux::print(&head);
+    // aux::deleteNodeAtGivenPosition(&head, 2);
+    // aux::print(&head);
 
-    aux::print(&head);
-    aux::deleteNodeAtGivenPosition(&head, 1);
+    // aux::print(&head);
+    // aux::deleteNodeAtGivenPosition(&head, 1);
+    // aux::print(&head);
+
+    aux::deleteList(&head);
     aux::print(&head);
 
 

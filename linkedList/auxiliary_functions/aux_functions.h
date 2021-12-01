@@ -109,6 +109,18 @@ namespace aux{
             return;
         }
     }
+
+    void deleteList(Node** ref){
+        Node* head = *ref;
+        Node* next = nullptr;
+
+        while(head != nullptr){
+            next = head->next;
+            delete head;
+            head = next;
+        }
+        *ref = nullptr;
+    }
 }
 
 #endif
