@@ -163,6 +163,16 @@ namespace aux{
 
         return findNthNode(head->next, pos, ++cont);
     }
+
+    int findNthNode(Node* head, int pos){
+        if(!head)
+            return -1;
+
+        if(pos == 0)
+            return head->data;
+
+        return findNthNode(head->next, --pos);
+    }
 }
 
 #endif

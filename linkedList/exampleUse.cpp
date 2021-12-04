@@ -65,6 +65,8 @@ int main(){
         cout<<"Node found, value "<<temp->data<<endl;
     else
         cout<<"Not found"<<endl;
+
+    cout<<"Element at index 3 is: "<<aux::findNthNode(head, 3)<<endl;
         
 
 
