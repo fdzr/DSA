@@ -53,8 +53,11 @@ int main(){
     // aux::deleteList(&head);
     // aux::print(&head);
 
-    cout<<aux::lengthListRecursive(&head)<<endl;
-    cout<<aux::lengthListRecursive(&head);
+    // cout<<aux::lengthListRecursive(&head)<<endl;
+    // cout<<aux::lengthListRecursive(&head);
+
+    cout<<aux::findValueRecursive(&head, 15)<<endl;
+    cout<<aux::findValueIterative(&head, 5)<<endl;
 
 
     return 0;

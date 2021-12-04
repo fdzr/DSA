@@ -136,6 +136,23 @@ namespace aux{
 
         return cont;
     }
+
+    bool findValueRecursive(Node** ref, int val){
+        if(!*ref)
+            return false;
+
+        if((*ref)->data == val)
+            return true;
+
+        return findValueRecursive(&(*ref)->next, val);
+    }
+
+    bool findValueIterative(Node** ref, int val){
+        for(auto p=*ref; p!=nullptr;p=p->next)
+            if(p->data == val)
+                return true;
+        return false;
+    }
 }
 
 #endif
