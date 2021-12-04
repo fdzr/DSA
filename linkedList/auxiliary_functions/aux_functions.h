@@ -121,6 +121,21 @@ namespace aux{
         }
         *ref = nullptr;
     }
+
+    int lengthListRecursive(Node** ref){
+        if(*ref == nullptr)
+            return 0;
+
+        return 1 + lengthListRecursive(&(*ref)->next);
+    }
+
+    int lengthListIterative(Node** ref){
+        int cont = 0;
+        for(auto p=*ref; p!=nullptr; p=p->next)
+            cont++;
+
+        return cont;
+    }
 }
 
 #endif

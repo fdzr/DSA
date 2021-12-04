@@ -50,8 +50,11 @@ int main(){
     // aux::deleteNodeAtGivenPosition(&head, 1);
     // aux::print(&head);
 
-    aux::deleteList(&head);
-    aux::print(&head);
+    // aux::deleteList(&head);
+    // aux::print(&head);
+
+    cout<<aux::lengthListRecursive(&head)<<endl;
+    cout<<aux::lengthListRecursive(&head);
 
 
     return 0;
