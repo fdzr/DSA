@@ -58,6 +58,14 @@ int main(){
 
     cout<<aux::findValueRecursive(&head, 15)<<endl;
     cout<<aux::findValueIterative(&head, 5)<<endl;
+    
+    auto temp = aux::findNthNode(head, 3, 0);
+
+    if (temp)
+        cout<<"Node found, value "<<temp->data<<endl;
+    else
+        cout<<"Not found"<<endl;
+        
 
 
     return 0;
