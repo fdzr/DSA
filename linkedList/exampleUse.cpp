@@ -56,8 +56,8 @@ int main(){
     // cout<<aux::lengthListRecursive(&head)<<endl;
     // cout<<aux::lengthListRecursive(&head);
 
-    cout<<aux::findValueRecursive(&head, 15)<<endl;
-    cout<<aux::findValueIterative(&head, 5)<<endl;
+    // cout<<aux::findValueRecursive(&head, 15)<<endl;
+    // cout<<aux::findValueIterative(&head, 5)<<endl;
     
     auto temp = aux::findNthNode(head, 3, 0);
 
@@ -69,8 +69,8 @@ int main(){
     cout<<"Element at index 3 is: "<<aux::findNthNode(head, 3)<<endl;
 
     aux::printNthNodeBackward(head, 3);
-        
-
+    aux::printNthNodeBackwardRecursively(head, 4);    
+    
 
     return 0;
 }

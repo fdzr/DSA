@@ -182,6 +182,15 @@ namespace aux{
 
         cout<<"The node in the "<<pos<<"rd position is: "<<temp->data<<endl;
     }
+
+    void printNthNodeBackwardRecursively(Node* head, int pos){
+        static int i =0;
+        if(!head)
+            return;
+        printNthNodeBackwardRecursively(head->next, pos);
+        if(++i == pos)
+            cout<<head->data<<endl;
+    }
 }
 
 #endif
