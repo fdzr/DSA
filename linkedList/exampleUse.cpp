@@ -67,6 +67,8 @@ int main(){
         cout<<"Not found"<<endl;
 
     cout<<"Element at index 3 is: "<<aux::findNthNode(head, 3)<<endl;
+
+    aux::printNthNodeBackward(head, 3);
         
 
 

@@ -173,6 +173,15 @@ namespace aux{
 
         return findNthNode(head->next, --pos);
     }
+
+    void printNthNodeBackward(Node* head, int pos){
+        int len = lengthListRecursive(&head);
+        Node* temp = head;
+        for(auto p=1; p < len-pos+1; ++p)
+            temp = temp->next;
+
+        cout<<"The node in the "<<pos<<"rd position is: "<<temp->data<<endl;
+    }
 }
 
 #endif
