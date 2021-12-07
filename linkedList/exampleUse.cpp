@@ -70,7 +70,7 @@ int main(){
 
     aux::printNthNodeBackward(head, 3);
     aux::printNthNodeBackwardRecursively(head, 4);    
-    
+    aux::getMiddleNode(head);
 
     return 0;
 }

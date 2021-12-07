@@ -191,6 +191,27 @@ namespace aux{
         if(++i == pos)
             cout<<head->data<<endl;
     }
+
+    void getMiddleNode(Node* head){
+        int cont = 0;
+        Node* temp = nullptr, *current = head;
+
+        while(current){
+            cont++;
+            if(cont % 2){
+                if(temp){
+                    temp = temp->next;
+                    cout<<temp->data<<endl;
+                    }
+                else
+                    temp = current;
+            }
+            current = current->next;
+        }
+        if(cont % 2 == 0)
+            temp = temp->next;
+        cout<<"The middle node contains as value: "<<temp->data;
+    }
 }
 
 #endif
