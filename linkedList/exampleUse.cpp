@@ -73,7 +73,8 @@ int main(){
     // aux::printNthNodeBackwardRecursively(head, 4);    
     // aux::getMiddleNode(head);
     cout<<aux::countGivenNode(head, 6)<<endl;
-    cout<<aux::countGivenNodeRecursively(head, 6);
+    cout<<aux::countGivenNodeRecursively(head, 6)<<endl;
+    cout<<aux::countGivenNodeRecursively2Version(head, 6)<<endl;
 
     return 0;
 }
