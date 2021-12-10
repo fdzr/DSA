@@ -212,6 +212,19 @@ namespace aux{
             temp = temp->next;
         cout<<"The middle node contains as value: "<<temp->data;
     }
+
+    int countGivenNode(Node* head, int value){
+        int cont = 0;
+        Node* temp = head;
+        while(temp){
+            if(temp->data == value)
+                cont++;
+            temp = temp->next;
+        }
+        return cont;
+    }
+
+    
 }
 
 #endif
