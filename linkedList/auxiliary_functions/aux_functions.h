@@ -244,6 +244,17 @@ namespace aux{
 
         return countGivenNodeRecursively2Version(head->next, value);
     }
+
+    int countGivenNodeRecursively3Version(Node* head, int value){
+        if(!head)
+            return 0;
+
+        int cont = countGivenNodeRecursively3Version(head->next, value);
+        if(head->data == value)
+            cont++;
+
+        return cont;
+    }
 }
 
 #endif

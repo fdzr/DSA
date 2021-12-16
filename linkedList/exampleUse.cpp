@@ -26,6 +26,7 @@ int main(){
     aux::insertAfter(second, 5);
     aux::insertAtEnd(&head, 6);
     aux::insertAtEnd(&head, 6);
+    aux::insertAtEnd(&head, 6);
 
     aux::print(&head);
     // aux::deleteNode(&head, 0);
@@ -75,6 +76,7 @@ int main(){
     cout<<aux::countGivenNode(head, 6)<<endl;
     cout<<aux::countGivenNodeRecursively(head, 6)<<endl;
     cout<<aux::countGivenNodeRecursively2Version(head, 6)<<endl;
+    cout<<aux::countGivenNodeRecursively3Version(head, 6)<<endl;
 
     return 0;
 }
