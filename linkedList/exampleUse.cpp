@@ -73,10 +73,11 @@ int main(){
     // aux::printNthNodeBackward(head, 3);
     // aux::printNthNodeBackwardRecursively(head, 4);    
     // aux::getMiddleNode(head);
-    cout<<aux::countGivenNode(head, 6)<<endl;
-    cout<<aux::countGivenNodeRecursively(head, 6)<<endl;
-    cout<<aux::countGivenNodeRecursively2Version(head, 6)<<endl;
-    cout<<aux::countGivenNodeRecursively3Version(head, 6)<<endl;
+    // cout<<aux::countGivenNode(head, 6)<<endl;
+    // cout<<aux::countGivenNodeRecursively(head, 6)<<endl;
+    // cout<<aux::countGivenNodeRecursively2Version(head, 6)<<endl;
+    // cout<<aux::countGivenNodeRecursively3Version(head, 6)<<endl;
+    cout<<aux::detectLoopInLinkedList(head);
 
     return 0;
 }

@@ -255,6 +255,22 @@ namespace aux{
 
         return cont;
     }
+
+    bool detectLoopInLinkedList(Node* head){
+        if(!head)
+            return false;
+
+        while(head){
+            if(head->data == -1)
+                return true;
+
+            head->data = -1;
+            head = head->next;
+        }
+
+        return false;
+
+    }
 }
 
 #endif
