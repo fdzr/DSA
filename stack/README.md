@@ -1,3 +1,4 @@
 ## Index of the problems
 
-1. Implement Stack using arrays. 
+1. Stack using arrays.
+2. Stack using linkedlists.
