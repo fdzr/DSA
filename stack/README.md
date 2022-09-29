@@ -6,3 +6,4 @@
 4. Check if an expression is balanced or not
     - {[{}{}]}[()] it is balanced
     - {()}[), {(}) are not balanced.
+5. Reverse a stack recursively.
