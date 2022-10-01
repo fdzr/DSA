@@ -1,4 +1,4 @@
-## Index of the problems
+## Index of the problems on stacks
 
 1. Implement a stack using arrays.
 2. Implement a stack using linkedlists.
