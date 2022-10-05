@@ -1,4 +1,5 @@
 ## Index of the problems on queues
 
-1. Implement queue using linkedlist.
-2. Implement queue using array.
+1. Implement a queue using linkedlist.
+2. Implement a queue using array.
+3. Implement a queue using stack as data structure.
