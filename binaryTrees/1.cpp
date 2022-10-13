@@ -4,27 +4,26 @@
 using namespace std;
 using namespace Tree;
 
-void insert(Node* tree, int key) {
-    if(!tree) {
-
-        return;
+Node* insert(Node* root, int key) {
+    if(!root) {
+        return createNode(key);
     }
 
-    if (key < tree->key)
-        insert(tree->left, key);
+    if (key < root->key)
+        root->left = insert(root->left, key);
     else
-        insert(tree->right, key);
+        root->right = insert(root->right, key);
 
-    if (key < tree->key && !tree->left) {
-        tree->left = createNode(key);
-        return;
-    }
+    // if (key < tree->key && !tree->left) {
+    //     tree->left = createNode(key);
+    //     return;
+    // }
 
-    if (key > tree->key && !tree->right) {
-        tree->right = createNode(key);
-        return;
-    }   
-
+    // if (key > tree->key && !tree->right) {
+    //     tree->right = createNode(key);
+    //     return;
+    // }   
+    return root;
 
 }
 
@@ -41,7 +40,7 @@ int main() {
 
     preOrder(root);
     cout<<endl;
-    insert(root, 16);
+    insert(root, 24);
     preOrder(root);
 
     return 0;
