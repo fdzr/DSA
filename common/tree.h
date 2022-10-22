@@ -52,6 +52,14 @@ namespace Tree {
         std::cout<<root->key<<" ";
     }
 
+    void search(Node* root, int key) {
+        if (!root)
+            return;
+        
+        if (root->key == key)
+            return ;
+    }
+
 };
 
 #endif

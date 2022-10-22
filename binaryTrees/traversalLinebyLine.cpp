@@ -21,7 +21,7 @@ void levelOrder(Node* root){
 
         if(tmp == nullptr){
             q.push(nullptr);
-            cou<<endl;
+            cout<<endl;
         }
         else{
             if(tmp->left)
