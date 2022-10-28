@@ -1,4 +1,6 @@
 #include<iostream>
+using namespace std;
+
 
 #ifndef TREE_H
 #define TREE_H
@@ -52,12 +54,31 @@ namespace Tree {
         std::cout<<root->key<<" ";
     }
 
-    void search(Node* root, int key) {
+    void searchKey(Node* root, int key, Node* &parent) {
         if (!root)
             return;
         
-        if (root->key == key)
-            return ;
+        if (root->key == key) {
+            if (!parent) {
+                cout<<"key founded! "<<key;
+            }
+            else if (parent->left && parent->left->key == key)
+                cout<<"the key is the node left";
+            else if(parent->right && parent->right->key == key)
+                cout<<"the key is the node right";
+
+            return;
+        }
+
+        if (key < root->key){
+            parent = root;
+            searchKey(root->left, key, parent);
+        }
+        else {
+            parent = root;
+            searchKey(root->right, key, parent);
+        }
+            
     }
 
 };

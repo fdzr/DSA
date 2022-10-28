@@ -10,9 +10,9 @@ void search(Node* root, int key) {
         cout<<"found it "<<root->key;
 
     if (key < root->key) 
-        search(root->left, key);
+        ::search(root->left, key);
     else 
-        search(root->right, key);
+        ::search(root->right, key);
 
 }
 
@@ -28,7 +28,7 @@ int main() {
     root->right->left->right = createNode(19);
     root->right->right->right = createNode(30);
 
-    search(root, 19);
+    ::search(root, 19);
 
 
     return 0;
