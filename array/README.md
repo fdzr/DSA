@@ -6,3 +6,4 @@
 11. https://leetcode.com/problems/single-number/
 12. https://leetcode.com/problems/intersection-of-two-arrays/
 13. https://leetcode.com/problems/intersection-of-two-arrays-ii/description/
+14. https://leetcode.com/problems/majority-element/
