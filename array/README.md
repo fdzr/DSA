@@ -4,3 +4,4 @@
 9. Find the index of a given number or the index where a given number can be inserted.
 10. Sum of digits.
 11. https://leetcode.com/problems/single-number/
+12. https://leetcode.com/problems/intersection-of-two-arrays/
