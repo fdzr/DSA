@@ -11,3 +11,4 @@
 17. https://leetcode.com/problems/running-sum-of-1d-array/submissions/857292295/
 18. https://leetcode.com/problems/final-value-of-variable-after-performing-operations/
 19. https://leetcode.com/problems/shuffle-the-array/description/
+20. https://leetcode.com/problems/number-of-good-pairs/description/
