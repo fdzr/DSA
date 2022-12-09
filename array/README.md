@@ -9,3 +9,4 @@
 14. https://leetcode.com/problems/majority-element/
 16. https://leetcode.com/problems/concatenation-of-array/solutions/
 17. https://leetcode.com/problems/running-sum-of-1d-array/submissions/857292295/
+18. https://leetcode.com/problems/final-value-of-variable-after-performing-operations/
