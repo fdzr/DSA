@@ -12,3 +12,4 @@
 18. https://leetcode.com/problems/final-value-of-variable-after-performing-operations/
 19. https://leetcode.com/problems/shuffle-the-array/description/
 20. https://leetcode.com/problems/number-of-good-pairs/description/
+21. https://leetcode.com/problems/richest-customer-wealth/description/
