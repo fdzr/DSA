@@ -18,3 +18,4 @@
 24. https://leetcode.com/problems/how-many-numbers-are-smaller-than-the-current-number/description/
 25. https://leetcode.com/problems/decode-xored-array/description/
 26. https://leetcode.com/problems/decompress-run-length-encoded-list/description/
+27. https://leetcode.com/problems/create-target-array-in-the-given-order/description/
