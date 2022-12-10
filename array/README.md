@@ -19,3 +19,4 @@
 25. https://leetcode.com/problems/decode-xored-array/description/
 26. https://leetcode.com/problems/decompress-run-length-encoded-list/description/
 27. https://leetcode.com/problems/create-target-array-in-the-given-order/description/
+28. https://leetcode.com/problems/count-items-matching-a-rule/description/
