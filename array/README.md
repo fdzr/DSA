@@ -13,3 +13,4 @@
 19. https://leetcode.com/problems/shuffle-the-array/description/
 20. https://leetcode.com/problems/number-of-good-pairs/description/
 21. https://leetcode.com/problems/richest-customer-wealth/description/
+22. https://leetcode.com/problems/maximum-number-of-words-found-in-sentences/description/
