@@ -22,3 +22,4 @@
 28. https://leetcode.com/problems/count-items-matching-a-rule/description/
 29. https://leetcode.com/problems/largest-local-values-in-a-matrix/description/
 30. https://leetcode.com/problems/number-of-arithmetic-triplets/description/
+31. https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/description/
