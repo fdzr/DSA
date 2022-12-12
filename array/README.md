@@ -24,3 +24,4 @@
 30. https://leetcode.com/problems/number-of-arithmetic-triplets/description/
 31. https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/description/
 32. https://leetcode.com/problems/count-number-of-pairs-with-absolute-difference-k/description/
+33. https://leetcode.com/problems/truncate-sentence/description/
