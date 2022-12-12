@@ -25,3 +25,4 @@
 31. https://leetcode.com/problems/check-if-two-string-arrays-are-equivalent/description/
 32. https://leetcode.com/problems/count-number-of-pairs-with-absolute-difference-k/description/
 33. https://leetcode.com/problems/truncate-sentence/description/
+34. https://leetcode.com/problems/count-the-number-of-consistent-strings/description/
