@@ -27,3 +27,4 @@
 33. https://leetcode.com/problems/truncate-sentence/description/
 34. https://leetcode.com/problems/count-the-number-of-consistent-strings/description/
 35. https://leetcode.com/problems/sort-the-people/description/
+36. https://leetcode.com/problems/maximum-product-difference-between-two-pairs/description/
