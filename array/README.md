@@ -32,3 +32,4 @@
 38. https://leetcode.com/problems/count-equal-and-divisible-pairs-in-an-array/description/
 39. https://leetcode.com/problems/matrix-diagonal-sum/description/
 40. https://leetcode.com/problems/maximum-product-of-two-elements-in-an-array/description/
+41. https://leetcode.com/problems/minimum-time-visiting-all-points/description/
