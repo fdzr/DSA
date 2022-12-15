@@ -6,3 +6,4 @@
 7. https://leetcode.com/problems/goal-parser-interpretation/description/
 8. https://leetcode.com/problems/cells-in-a-range-on-an-excel-sheet/description/
 9. https://leetcode.com/problems/split-a-string-in-balanced-strings/description/
+10. https://leetcode.com/problems/decode-the-message/description/
