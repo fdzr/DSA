@@ -8,3 +8,4 @@
 9. https://leetcode.com/problems/split-a-string-in-balanced-strings/description/
 10. https://leetcode.com/problems/decode-the-message/description/
 11. https://leetcode.com/problems/sorting-the-sentence/description/
+12. https://leetcode.com/problems/check-if-the-sentence-is-pangram/description/
