@@ -4,3 +4,4 @@
 5. https://leetcode.com/problems/defanging-an-ip-address/description/
 6. https://leetcode.com/problems/jewels-and-stones/
 7. https://leetcode.com/problems/goal-parser-interpretation/description/
+8. https://leetcode.com/problems/cells-in-a-range-on-an-excel-sheet/description/
