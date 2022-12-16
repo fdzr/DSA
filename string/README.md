@@ -13,3 +13,4 @@
 14. https://leetcode.com/problems/count-asterisks/description/
 15. https://leetcode.com/problems/to-lower-case/description/
 16. https://leetcode.com/problems/reverse-words-in-a-string-iii/description/
+17. https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/description/
