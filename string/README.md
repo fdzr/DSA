@@ -16,3 +16,4 @@
 17. https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/description/
 18. https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers/description/
 19. https://leetcode.com/problems/minimum-amount-of-time-to-collect-garbage/description/
+20. https://leetcode.com/problems/removing-stars-from-a-string/description/
