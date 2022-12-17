@@ -17,3 +17,4 @@
 18. https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers/description/
 19. https://leetcode.com/problems/minimum-amount-of-time-to-collect-garbage/description/
 20. https://leetcode.com/problems/removing-stars-from-a-string/description/
+21. https://leetcode.com/problems/execution-of-all-suffix-instructions-staying-in-a-grid/description/
