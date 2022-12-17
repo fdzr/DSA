@@ -15,3 +15,4 @@
 16. https://leetcode.com/problems/reverse-words-in-a-string-iii/description/
 17. https://leetcode.com/problems/minimum-number-of-operations-to-move-all-balls-to-each-box/description/
 18. https://leetcode.com/problems/partitioning-into-minimum-number-of-deci-binary-numbers/description/
+19. https://leetcode.com/problems/minimum-amount-of-time-to-collect-garbage/description/
