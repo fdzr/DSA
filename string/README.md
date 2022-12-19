@@ -22,3 +22,4 @@
 23. https://leetcode.com/problems/longest-substring-without-repeating-characters/description/
 24. https://leetcode.com/problems/string-to-integer-atoi/description/
 25. https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/description/
+26. https://leetcode.com/problems/optimal-partition-of-string/description/
