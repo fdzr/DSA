@@ -23,3 +23,4 @@
 24. https://leetcode.com/problems/string-to-integer-atoi/description/
 25. https://leetcode.com/problems/minimum-add-to-make-parentheses-valid/description/
 26. https://leetcode.com/problems/optimal-partition-of-string/description/
+27. https://leetcode.com/problems/remove-all-occurrences-of-a-substring/description/
