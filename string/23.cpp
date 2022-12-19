@@ -2,7 +2,7 @@
 
 using namespace std;
 
-
+//O(n^2)
 int lengthOfLongestSubstring(string s) {
     int max_ = 0;
     string ans = "";
@@ -22,10 +22,33 @@ int lengthOfLongestSubstring(string s) {
 }
 
 
-int main() {
-    string s = " ";
-    cout<<lengthOfLongestSubstring(s);
+//Time O(n) - Space O(n)
+int lengthOfLongestSubstring_2(string s) {
+    int ans = 0;
+    int i = 0;
+    int index = 0;
+    unordered_map<char, int> um;
 
+    for(auto ch: s) {
+        if(um[ch] > 0) {
+            i = um[ch];
+        }
+
+        ans = max(ans, index - i + 1);
+        um[ch] = index + 1;
+        ++index;
+    }
+
+
+    return ans;
+}
+
+
+int main() {
+    string s = "pwwkew";
+    cout<<lengthOfLongestSubstring(s);
+    cout<<endl;
+    cout<<lengthOfLongestSubstring_2(s);
 
     return 0;
 }
