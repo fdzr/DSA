@@ -26,3 +26,4 @@
 27. https://leetcode.com/problems/remove-all-occurrences-of-a-substring/description/
 28. https://leetcode.com/problems/display-table-of-food-orders-in-a-restaurant/description/
 29. https://leetcode.com/problems/number-of-good-ways-to-split-a-string/description/
+30. https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced/description/
