@@ -25,3 +25,4 @@
 26. https://leetcode.com/problems/optimal-partition-of-string/description/
 27. https://leetcode.com/problems/remove-all-occurrences-of-a-substring/description/
 28. https://leetcode.com/problems/display-table-of-food-orders-in-a-restaurant/description/
+29. https://leetcode.com/problems/number-of-good-ways-to-split-a-string/description/
