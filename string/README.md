@@ -30,3 +30,4 @@
 31. https://leetcode.com/problems/minimum-remove-to-make-valid-parentheses/description/
 34. https://leetcode.com/problems/rings-and-rods/description/
 35. https://leetcode.com/problems/remove-outermost-parentheses/description/
+36. https://leetcode.com/problems/number-of-strings-that-appear-as-substrings-in-word/description/
