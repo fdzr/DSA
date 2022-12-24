@@ -40,3 +40,4 @@
 47. https://leetcode.com/problems/find-n-unique-integers-sum-up-to-zero/description/
 48. https://leetcode.com/problems/find-numbers-with-even-number-of-digits/description/
 49. https://leetcode.com/problems/array-partition/description/
+50. https://leetcode.com/problems/find-target-indices-after-sorting-array/description/
