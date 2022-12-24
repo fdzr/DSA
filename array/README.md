@@ -35,3 +35,4 @@
 41. https://leetcode.com/problems/minimum-time-visiting-all-points/description/
 42. https://leetcode.com/problems/sort-array-by-increasing-frequency/description/
 43. https://leetcode.com/problems/third-maximum-number/description/
+45. https://leetcode.com/problems/find-first-palindromic-string-in-the-array/description/
