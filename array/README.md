@@ -41,3 +41,4 @@
 48. https://leetcode.com/problems/find-numbers-with-even-number-of-digits/description/
 49. https://leetcode.com/problems/array-partition/description/
 50. https://leetcode.com/problems/find-target-indices-after-sorting-array/description/
+51. https://leetcode.com/problems/maximum-number-of-pairs-in-array/description/
