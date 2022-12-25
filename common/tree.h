@@ -7,19 +7,19 @@ using namespace std;
 
 namespace Tree {
 
-    struct Node {
-        int key;
-        Node * left, *right;
+    struct TreeNode {
+        int val;
+        TreeNode * left, *right;
     };
 
-    Node* createNode(int key){
-        Node* tmp = new Node;
-        tmp->key = key;
+    TreeNode* createNode(int key){
+        TreeNode* tmp = new TreeNode;
+        tmp->val = key;
         tmp->left = tmp->right = nullptr;
         return tmp;
     }
 
-    int isLeaf(Node* node){
+    int isLeaf(TreeNode* node){
         if(node == nullptr)
             return 0;
         if(node->left == nullptr && node->right == nullptr)
@@ -27,50 +27,49 @@ namespace Tree {
         return 0;
     }
 
-    void preOrder(Node* root) {
+    void preOrder(TreeNode* root) {
         if (!root)
             return;
 
-        std::cout<<root->key<<" ";
+        std::cout<<root->val<<" ";
         preOrder(root->left);
         preOrder(root->right);
     }
 
-    void inOrder(Node* root) {
+    void inOrder(TreeNode* root) {
         if (!root) 
             return;
 
         inOrder(root->left);
-        std::cout<<root->key<<" ";
+        std::cout<<root->val<<" ";
         inOrder(root->right);
     }
 
-    void postOrder(Node* root) {
+    void postOrder(TreeNode* root) {
         if(!root)
             return;
 
         postOrder(root->left);
         postOrder(root->right);
-        std::cout<<root->key<<" ";
+        std::cout<<root->val<<" ";
     }
 
-    void searchKey(Node* root, int key, Node* &parent) {
+    void searchKey(TreeNode* root, int key, TreeNode* &parent) {
         if (!root)
             return;
         
-        if (root->key == key) {
-            if (!parent) {
+        if (root->val == key) {
+            if (!parent)
                 cout<<"key founded! "<<key;
-            }
-            else if (parent->left && parent->left->key == key)
+            else if (parent->left && parent->left->val == key)
                 cout<<"the key is the node left";
-            else if(parent->right && parent->right->key == key)
+            else if(parent->right && parent->right->val == key)
                 cout<<"the key is the node right";
 
             return;
         }
 
-        if (key < root->key){
+        if (key < root->val){
             parent = root;
             searchKey(root->left, key, parent);
         }
