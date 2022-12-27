@@ -38,3 +38,4 @@
 44. https://leetcode.com/problems/most-common-word/description/
 45. https://leetcode.com/problems/buddy-strings/description/
 46. https://leetcode.com/problems/first-letter-to-appear-twice/description/
+47. https://leetcode.com/problems/check-if-all-characters-have-equal-number-of-occurrences/description/
