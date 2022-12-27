@@ -37,3 +37,4 @@
 41. https://leetcode.com/problems/top-k-frequent-words/description/
 44. https://leetcode.com/problems/most-common-word/description/
 45. https://leetcode.com/problems/buddy-strings/description/
+46. https://leetcode.com/problems/first-letter-to-appear-twice/description/
