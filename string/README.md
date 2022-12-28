@@ -42,3 +42,4 @@
 48. https://leetcode.com/problems/reverse-string/description/
 49. https://leetcode.com/problems/merge-strings-alternately/description/
 50. https://leetcode.com/problems/group-anagrams/description/
+52. https://leetcode.com/problems/valid-anagram/description/
