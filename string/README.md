@@ -46,3 +46,4 @@
 53. https://leetcode.com/problems/find-all-anagrams-in-a-string/description/
 54. https://leetcode.com/problems/permutation-in-string/description/
 55. https://leetcode.com/problems/valid-parentheses/description/
+56. https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/

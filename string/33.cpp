@@ -41,7 +41,7 @@ vector<string> letterCombinations(string digits) {
 
 
 int main() {
-    string digits = "23";
+    string digits = "235";
 
     for(auto e: letterCombinations(digits))
         cout<<e<<" ";
