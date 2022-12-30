@@ -1,10 +1,10 @@
 #ifndef NODE_H
 #define NODE_H
 
-class Node{
+class ListNode{
     public:
-        int data;
-        Node* next;
+        int val;
+        ListNode* next;
 };
 
 #endif

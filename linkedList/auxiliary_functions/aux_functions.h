@@ -7,37 +7,37 @@ using namespace std;
 #define AUX_FUNCTIONS_H
 
 namespace aux{
-    void print(Node** ref){
-        Node* head{*ref};
+    void print(ListNode** ref){
+        ListNode* head{*ref};
         while(head != nullptr){
-            cout<<head->data<<" ";
+            cout<<head->val<<" ";
             head = head->next;
         }
         cout<<endl;
     }
 
-    void pushAtFront(Node** ref, int data){
-        Node* new_node = new Node();
-        new_node->data = data;   
+    void pushAtFront(ListNode** ref, int data){
+        ListNode* new_node = new ListNode();
+        new_node->val = data;
         new_node->next = (*ref);
         (*ref) = new_node;
     }
 
-    void insertAfter(Node* prev, int data){
+    void insertAfter(ListNode* prev, int data){
         if(!prev){
             cout<<"Node not founded";
             return;
         }
         
-        Node* actual = new Node();
-        actual->data = data;
+        ListNode* actual = new ListNode();
+        actual->val = data;
         actual->next = prev->next;
         prev->next = actual;
     }
 
-    void insertAtEnd(Node** ref, int data){
-        Node* actual = new Node();
-        actual->data = data;
+    void insertAtEnd(ListNode** ref, int data){
+        ListNode* actual = new ListNode();
+        actual->val = data;
         actual->next = nullptr;
 
         if (!*ref){
@@ -45,24 +45,24 @@ namespace aux{
             return;
         }
 
-        Node* tmp = *ref;
+        ListNode* tmp = *ref;
         while(tmp->next)
             tmp = tmp->next;
 
         tmp->next = actual;
     }
 
-    void deleteNode(Node** ref, int key){
-        Node* prev = nullptr;
-        Node* head = *ref;
+    void deleteNode(ListNode** ref, int key){
+        ListNode* prev = nullptr;
+        ListNode* head = *ref;
 
-        if(head->data == key){
+        if(head->val == key){
             *ref = head->next;
             delete head;
             return;
         }
         
-        while(head != nullptr && head->data != key){
+        while(head != nullptr && head->val != key){
             prev = head;
             head = head->next;
         }
@@ -76,9 +76,9 @@ namespace aux{
         delete head;
     }
 
-    void deleteNodeAtGivenPosition(Node** ref, int pos){
-        Node* head = *ref;
-        Node* prev = nullptr;
+    void deleteNodeAtGivenPosition(ListNode** ref, int pos){
+        ListNode* head = *ref;
+        ListNode* prev = nullptr;
 
         if(pos == 0){
             (*ref) = head->next;
@@ -110,9 +110,9 @@ namespace aux{
         }
     }
 
-    void deleteList(Node** ref){
-        Node* head = *ref;
-        Node* next = nullptr;
+    void deleteList(ListNode** ref){
+        ListNode* head = *ref;
+        ListNode* next = nullptr;
 
         while(head != nullptr){
             next = head->next;
@@ -122,14 +122,14 @@ namespace aux{
         *ref = nullptr;
     }
 
-    int lengthListRecursive(Node** ref){
+    int lengthListRecursive(ListNode** ref){
         if(*ref == nullptr)
             return 0;
 
         return 1 + lengthListRecursive(&(*ref)->next);
     }
 
-    int lengthListIterative(Node** ref){
+    int lengthListIterative(ListNode** ref){
         int cont = 0;
         for(auto p=*ref; p!=nullptr; p=p->next)
             cont++;
@@ -137,24 +137,24 @@ namespace aux{
         return cont;
     }
 
-    bool findValueRecursive(Node** ref, int val){
+    bool findValueRecursive(ListNode** ref, int val){
         if(!*ref)
             return false;
 
-        if((*ref)->data == val)
+        if((*ref)->val == val)
             return true;
 
         return findValueRecursive(&(*ref)->next, val);
     }
 
-    bool findValueIterative(Node** ref, int val){
+    bool findValueIterative(ListNode** ref, int val){
         for(auto p=*ref; p!=nullptr;p=p->next)
-            if(p->data == val)
+            if(p->val == val)
                 return true;
         return false;
     }
 
-    Node* findNthNode(Node* head, int pos, int cont){
+    ListNode* findNthNode(ListNode* head, int pos, int cont){
         if(!head)
             return nullptr;
 
@@ -164,44 +164,44 @@ namespace aux{
         return findNthNode(head->next, pos, ++cont);
     }
 
-    int findNthNode(Node* head, int pos){
+    int findNthNode(ListNode* head, int pos){
         if(!head)
             return -1;
 
         if(pos == 0)
-            return head->data;
+            return head->val;
 
         return findNthNode(head->next, --pos);
     }
 
-    void printNthNodeBackward(Node* head, int pos){
+    void printNthNodeBackward(ListNode* head, int pos){
         int len = lengthListRecursive(&head);
-        Node* temp = head;
+        ListNode* temp = head;
         for(auto p=1; p < len-pos+1; ++p)
             temp = temp->next;
 
-        cout<<"The node in the "<<pos<<"rd position is: "<<temp->data<<endl;
+        cout<<"The node in the "<<pos<<"rd position is: "<<temp->val<<endl;
     }
 
-    void printNthNodeBackwardRecursively(Node* head, int pos){
+    void printNthNodeBackwardRecursively(ListNode* head, int pos){
         static int i =0;
         if(!head)
             return;
         printNthNodeBackwardRecursively(head->next, pos);
         if(++i == pos)
-            cout<<head->data<<endl;
+            cout<<head->val<<endl;
     }
 
-    void getMiddleNode(Node* head){
+    void getMiddleNode(ListNode* head){
         int cont = 0;
-        Node* temp = nullptr, *current = head;
+        ListNode* temp = nullptr, *current = head;
 
         while(current){
             cont++;
             if(cont % 2){
                 if(temp){
                     temp = temp->next;
-                    cout<<temp->data<<endl;
+                    cout<<temp->val<<endl;
                     }
                 else
                     temp = current;
@@ -210,61 +210,61 @@ namespace aux{
         }
         if(cont % 2 == 0)
             temp = temp->next;
-        cout<<"The middle node contains as value: "<<temp->data;
+        cout<<"The middle node contains as value: "<<temp->val;
     }
 
-    int countGivenNode(Node* head, int value){
+    int countGivenNode(ListNode* head, int value){
         int cont = 0;
-        Node* temp = head;
+        ListNode* temp = head;
         while(temp){
-            if(temp->data == value)
+            if(temp->val == value)
                 cont++;
             temp = temp->next;
         }
         return cont;
     }
 
-    int countGivenNodeRecursively(Node* head, int value){
+    int countGivenNodeRecursively(ListNode* head, int value){
         static int freq = 0;
         if(!head)
             return freq;
 
-        if(head->data == value)
+        if(head->val == value)
             freq++;
 
         return countGivenNodeRecursively(head->next, value);
     }
 
-    int countGivenNodeRecursively2Version(Node* head, int value){
+    int countGivenNodeRecursively2Version(ListNode* head, int value){
         if(!head)
             return 0;
 
-        if(head->data == value)
+        if(head->val == value)
             return 1 + countGivenNodeRecursively2Version(head->next, value);
 
         return countGivenNodeRecursively2Version(head->next, value);
     }
 
-    int countGivenNodeRecursively3Version(Node* head, int value){
+    int countGivenNodeRecursively3Version(ListNode* head, int value){
         if(!head)
             return 0;
 
         int cont = countGivenNodeRecursively3Version(head->next, value);
-        if(head->data == value)
+        if(head->val == value)
             cont++;
 
         return cont;
     }
 
-    bool detectLoopInLinkedList(Node* head){
+    bool detectLoopInLinkedList(ListNode* head){
         if(!head)
             return false;
 
         while(head){
-            if(head->data == -1)
+            if(head->val == -1)
                 return true;
 
-            head->data = -1;
+            head->val = -1;
             head = head->next;
         }
 
