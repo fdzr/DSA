@@ -47,3 +47,4 @@
 54. https://leetcode.com/problems/permutation-in-string/description/
 55. https://leetcode.com/problems/valid-parentheses/description/
 56. https://leetcode.com/problems/find-the-index-of-the-first-occurrence-in-a-string/description/
+57. https://leetcode.com/problems/replace-all-digits-with-characters/description/
