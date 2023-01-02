@@ -50,3 +50,4 @@
 57. https://leetcode.com/problems/replace-all-digits-with-characters/description/
 58. https://leetcode.com/problems/decrypt-string-from-alphabet-to-integer-mapping/description/
 59. https://leetcode.com/problems/destination-city/description/
+60. https://leetcode.com/problems/number-of-valid-words-in-a-sentence/description/
