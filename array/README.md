@@ -50,3 +50,4 @@
 57. https://leetcode.com/problems/number-of-students-doing-homework-at-a-given-time/description/
 58. https://leetcode.com/problems/sum-of-unique-elements/description/
 59. https://leetcode.com/problems/counting-bits/description/
+60. https://leetcode.com/problems/the-k-weakest-rows-in-a-matrix/description/
