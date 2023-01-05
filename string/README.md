@@ -52,3 +52,4 @@
 59. https://leetcode.com/problems/destination-city/description/
 60. https://leetcode.com/problems/number-of-valid-words-in-a-sentence/description/
 61. https://leetcode.com/problems/length-of-last-word/description/
+62. https://leetcode.com/problems/ransom-note/description/
