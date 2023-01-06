@@ -54,3 +54,4 @@
 61. https://leetcode.com/problems/pascals-triangle/description/
 62. https://leetcode.com/problems/fibonacci-number/description/
 63. https://leetcode.com/problems/divisor-game/description/
+64. https://leetcode.com/problems/n-th-tribonacci-number/description/
