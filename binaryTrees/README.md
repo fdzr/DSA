@@ -8,5 +8,6 @@
 12. Generate all the paths from the root to the leaves.
 13. Find the sum of the left leaves.
 14. https://leetcode.com/problems/root-equals-sum-of-children/description/
+19. https://leetcode.com/problems/evaluate-boolean-binary-tree/description/
 15. https://leetcode.com/problems/range-sum-of-bst/description/
 20. https://leetcode.com/problems/find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree/description/
