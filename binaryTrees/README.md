@@ -11,3 +11,4 @@
 19. https://leetcode.com/problems/evaluate-boolean-binary-tree/description/
 15. https://leetcode.com/problems/range-sum-of-bst/description/
 20. https://leetcode.com/problems/find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree/description/
+21. https://leetcode.com/problems/merge-two-binary-trees/description/
