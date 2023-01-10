@@ -14,3 +14,4 @@
 21. https://leetcode.com/problems/merge-two-binary-trees/description/
 22. https://leetcode.com/problems/increasing-order-search-tree/description/
 23. https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers/description/
+24. https://leetcode.com/problems/average-of-levels-in-binary-tree/description/
