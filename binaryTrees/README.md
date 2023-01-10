@@ -13,3 +13,4 @@
 20. https://leetcode.com/problems/find-a-corresponding-node-of-a-binary-tree-in-a-clone-of-that-tree/description/
 21. https://leetcode.com/problems/merge-two-binary-trees/description/
 22. https://leetcode.com/problems/increasing-order-search-tree/description/
+23. https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers/description/
