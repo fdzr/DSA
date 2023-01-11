@@ -12,6 +12,17 @@ namespace Tree {
         TreeNode * left, *right;
     };
 
+    // class for n-ary trees
+    class Node {
+        public:
+            int val;
+            vector<Node*> children;
+
+            Node() {}
+            Node(int val_): val{val_}{}
+            Node(int val_, vector<Node*> _children): val{val_}, children(_children) {}
+    };
+
     TreeNode* createNode(int key){
         TreeNode* tmp = new TreeNode;
         tmp->val = key;
