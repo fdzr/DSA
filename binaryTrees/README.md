@@ -15,3 +15,4 @@
 22. https://leetcode.com/problems/increasing-order-search-tree/description/
 23. https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers/description/
 24. https://leetcode.com/problems/average-of-levels-in-binary-tree/description/
+25. https://leetcode.com/problems/maximum-depth-of-n-ary-tree/description/
