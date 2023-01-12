@@ -29,12 +29,7 @@ bool leafSimilar(TreeNode* root1, TreeNode* root2) {
     if(leaves1.size() != leaves2.size())
         return false;
 
-    for(int i = 0; i < leaves1.size(); ++i)
-        if(leaves1[i] != leaves2[i])
-            return false;
-
-    return true;
-
+    return leaves1 == leaves2;
 }
 
 
