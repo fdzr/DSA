@@ -17,3 +17,4 @@
 24. https://leetcode.com/problems/average-of-levels-in-binary-tree/description/
 25. https://leetcode.com/problems/maximum-depth-of-n-ary-tree/description/
 26. https://leetcode.com/problems/univalued-binary-tree/description/
+27. https://leetcode.com/problems/leaf-similar-trees/description/
