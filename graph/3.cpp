@@ -6,11 +6,8 @@ using vi = vector<int>;
 using vvi = vector<vi>;
 
 void loadGraph(vvi edges, vvi &graph) {
-    for(auto edge: edges) {
+    for(auto edge: edges)
         graph[edge[0]].push_back(edge[1]);
-    }
-
-
 }
 
 int findJudge(int n, vector<vector<int>>& trust) {
