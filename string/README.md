@@ -54,3 +54,4 @@
 61. https://leetcode.com/problems/length-of-last-word/description/
 62. https://leetcode.com/problems/ransom-note/description/
 64. https://leetcode.com/problems/is-subsequence/description/
+65. https://leetcode.com/problems/minimum-sum-of-four-digit-number-after-splitting-digits/description/
