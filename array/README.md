@@ -56,3 +56,4 @@
 63. https://leetcode.com/problems/divisor-game/description/
 64. https://leetcode.com/problems/n-th-tribonacci-number/description/
 65. https://leetcode.com/problems/pascals-triangle-ii/description/
+66. https://leetcode.com/problems/maximum-units-on-a-truck/description/
