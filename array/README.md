@@ -57,3 +57,4 @@
 64. https://leetcode.com/problems/n-th-tribonacci-number/description/
 65. https://leetcode.com/problems/pascals-triangle-ii/description/
 66. https://leetcode.com/problems/maximum-units-on-a-truck/description/
+67. https://leetcode.com/problems/make-array-zero-by-subtracting-equal-amounts/description/
