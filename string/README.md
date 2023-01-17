@@ -58,3 +58,4 @@
 66. https://leetcode.com/problems/maximum-69-number/description/
 67. https://leetcode.com/problems/di-string-match/description/
 68. https://leetcode.com/problems/check-if-word-equals-summation-of-two-words/description/
+69. https://leetcode.com/problems/longest-subsequence-with-limited-sum/description/
