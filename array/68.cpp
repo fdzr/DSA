@@ -43,19 +43,17 @@ vector<int> answerQueries2(vector<int>& nums, vector<int>& queries) {
     for(int i = 1; i < nums.size(); ++i)
         nums[i] += nums[i-1];
 
-    int cont = 0;
     vi ans(queries.size());
     for(int i = 0; i < queries.size(); ++i) {
-        auto ptrIndex = lower_bound(nums.begin(),nums.end(), queries[i]);
-        int index = ptrIndex - nums.begin();
-        ans[i] = (nums[index] == queries[i])? index+1: index;
+        int index = upper_bound(nums.begin(),nums.end(), queries[i]) - nums.begin();
+        ans[i] = index;
     }
     return ans;
 }
 
 int main() {
     vi nums = {4,5,2,1};
-    vi queries = {3,10,21};
+    vi queries = {3, 10, 21};
     for(auto elem: answerQueries2(nums, queries))
         cout<<elem<<" ";
 
