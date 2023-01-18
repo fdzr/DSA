@@ -6,3 +6,4 @@
 6. https://leetcode.com/problems/keys-and-rooms/description/
 7. https://leetcode.com/problems/min-cost-to-connect-all-points/description/
 8. https://leetcode.com/problems/number-of-provinces/description/
+9. https://leetcode.com/problems/redundant-connection/description/
