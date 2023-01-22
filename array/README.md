@@ -61,3 +61,4 @@
 68. https://leetcode.com/problems/longest-subsequence-with-limited-sum/description/
 69. https://leetcode.com/problems/minimum-subsequence-in-non-increasing-order/description/
 70. https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer/
+71. https://leetcode.com/problems/minimum-cost-to-move-chips-to-the-same-position/description/
