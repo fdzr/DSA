@@ -63,3 +63,4 @@
 70. https://leetcode.com/problems/maximum-count-of-positive-integer-and-negative-integer/
 71. https://leetcode.com/problems/minimum-cost-to-move-chips-to-the-same-position/description/
 72. https://leetcode.com/problems/two-furthest-houses-with-different-colors/description/
+73. https://leetcode.com/problems/minimum-cost-of-buying-candies-with-discount/description/
