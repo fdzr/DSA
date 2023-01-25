@@ -16,21 +16,23 @@ int longestPalindrome(string s) {
     for(auto ch: s)
         ans[ch]++;
 
-    for(auto item: ans)
+    for(auto item: ans) {
         if(item.second % 2 == 0)
             cont += item.second;
-
-    for(auto item: ans) {
-        if(item.second % 2 == 1 && item.second > max_odd)
-            max_odd = item.second;
+        else {
+            flag = true;
+            cont += item.second - 1;
+        }
     }
+        
 
-    return cont + max_odd;
+
+    return cont + int(flag);
 }
 
 
 int main() {
-    string s = "bb";
+    string s = "bbbaaac";
     cout<<longestPalindrome(s);
 
     return 0;
