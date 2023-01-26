@@ -65,4 +65,5 @@
 73. https://leetcode.com/problems/determine-color-of-a-chessboard-square/description/
 74. https://leetcode.com/problems/determine-if-string-halves-are-alike/description/
 75. https://leetcode.com/problems/generate-a-string-with-characters-that-have-odd-counts/description/
+76. https://leetcode.com/problems/robot-return-to-origin/description/
 
