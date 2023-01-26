@@ -70,4 +70,5 @@
 78. https://leetcode.com/problems/check-if-number-has-equal-digit-count-and-digit-value/description/
 79. https://leetcode.com/problems/maximum-value-of-a-string-in-an-array/description/
 80. https://leetcode.com/problems/kth-distinct-string-in-an-array/description/
+81. https://leetcode.com/problems/check-if-all-as-appears-before-all-bs/description/
 
