@@ -64,4 +64,5 @@
 72. https://leetcode.com/problems/longest-palindrome/description/
 73. https://leetcode.com/problems/determine-color-of-a-chessboard-square/description/
 74. https://leetcode.com/problems/determine-if-string-halves-are-alike/description/
+75. https://leetcode.com/problems/generate-a-string-with-characters-that-have-odd-counts/description/
 
