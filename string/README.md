@@ -68,4 +68,5 @@
 76. https://leetcode.com/problems/robot-return-to-origin/description/
 77. https://leetcode.com/problems/percentage-of-letter-in-string/description/
 78. https://leetcode.com/problems/check-if-number-has-equal-digit-count-and-digit-value/description/
+79. https://leetcode.com/problems/maximum-value-of-a-string-in-an-array/description/
 
