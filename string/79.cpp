@@ -4,23 +4,20 @@ using namespace std;
 
 
 int maximumValue(vector<string>& strs) {
-    int max = -1;
+    int max_ = -1;
     for(auto cad: strs) {
         auto ptr = find_if(cad.begin(), cad.end(), [](char c){
             return isalpha(c);
         });
 
-        if(ptr != cad.end()) {
-            if(int(cad.size()) > max)
-                max = cad.size();
-        }
-        else {
-            if(int num = stoi(cad); num > max)
-                max = num;
-        }
+        if(ptr != cad.end())
+            max_ = max(max_, int(cad.size()));
+        
+        else 
+            max_ = max(max_, stoi(cad));
     }
 
-    return max;
+    return max_;
 }
 
 
