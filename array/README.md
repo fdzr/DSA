@@ -65,3 +65,5 @@
 72. https://leetcode.com/problems/two-furthest-houses-with-different-colors/description/
 73. https://leetcode.com/problems/minimum-cost-of-buying-candies-with-discount/description/
 75. https://leetcode.com/problems/lemonade-change/description/
+77. https://leetcode.com/problems/count-good-triplets/description/
+78. https://leetcode.com/problems/find-the-highest-altitude/description/
