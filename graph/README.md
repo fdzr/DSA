@@ -10,3 +10,4 @@
 10. https://leetcode.com/problems/reorder-routes-to-make-all-paths-lead-to-the-city-zero/description/
 11. https://leetcode.com/problems/maximum-total-importance-of-roads/description/
 12. https://leetcode.com/problems/number-of-operations-to-make-network-connected/description/
+13. https://leetcode.com/problems/maximal-network-rank/description/
