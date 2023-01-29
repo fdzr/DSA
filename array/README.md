@@ -68,3 +68,4 @@
 77. https://leetcode.com/problems/count-good-triplets/description/
 78. https://leetcode.com/problems/find-the-highest-altitude/description/
 79. https://leetcode.com/problems/find-greatest-common-divisor-of-array/description/
+80. https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/description/
