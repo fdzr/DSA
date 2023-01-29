@@ -67,3 +67,4 @@
 75. https://leetcode.com/problems/lemonade-change/description/
 77. https://leetcode.com/problems/count-good-triplets/description/
 78. https://leetcode.com/problems/find-the-highest-altitude/description/
+79. https://leetcode.com/problems/find-greatest-common-divisor-of-array/description/
