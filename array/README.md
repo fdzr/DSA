@@ -71,3 +71,4 @@
 80. https://leetcode.com/problems/final-prices-with-a-special-discount-in-a-shop/description/
 81. https://leetcode.com/problems/convert-the-temperature/description/
 82. https://leetcode.com/problems/squares-of-a-sorted-array/description/
+83. https://leetcode.com/problems/difference-between-element-sum-and-digit-sum-of-an-array/description/
