@@ -73,3 +73,4 @@
 82. https://leetcode.com/problems/squares-of-a-sorted-array/description/
 83. https://leetcode.com/problems/difference-between-element-sum-and-digit-sum-of-an-array/description/
 84. https://leetcode.com/problems/maximum-number-of-balls-in-a-box/description/
+85. https://leetcode.com/problems/keep-multiplying-found-values-by-two/description/
