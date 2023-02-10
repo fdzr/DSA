@@ -79,3 +79,4 @@
 88. https://leetcode.com/problems/baseball-game/description/
 89. https://leetcode.com/problems/cells-with-odd-values-in-a-matrix/description/
 90. https://leetcode.com/problems/minimum-number-of-moves-to-seat-everyone/description/
+92. https://leetcode.com/problems/smallest-index-with-equal-value/description/
