@@ -21,7 +21,9 @@ vector<int> intersect(vector<int>& nums1, vector<int>& nums2) {
                 ans.push_back(key);
         }
     }
+
     return ans;
+
 }
 
 
