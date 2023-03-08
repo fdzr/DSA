@@ -80,3 +80,5 @@
 89. https://leetcode.com/problems/cells-with-odd-values-in-a-matrix/description/
 90. https://leetcode.com/problems/minimum-number-of-moves-to-seat-everyone/description/
 92. https://leetcode.com/problems/smallest-index-with-equal-value/description/
+93. https://leetcode.com/problems/last-stone-weight/submissions/910536631/
+94. https://leetcode.com/problems/sort-the-students-by-their-kth-score/submissions/911285711/
