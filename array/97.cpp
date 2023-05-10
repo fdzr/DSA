@@ -18,7 +18,6 @@ int helper(vi aux, int index) {
     return abs(sum_left - sum_right);
 }
 
-
 vector<int> leftRigthDifference(vector<int> nums) {
     vi ans(nums.size());
     for(int i = 0; i < nums.size(); ++i)
