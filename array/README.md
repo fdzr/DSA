@@ -82,3 +82,5 @@
 92. https://leetcode.com/problems/smallest-index-with-equal-value/description/
 93. https://leetcode.com/problems/last-stone-weight/submissions/910536631/
 94. https://leetcode.com/problems/sort-the-students-by-their-kth-score/submissions/911285711/
+95. https://leetcode.com/problems/group-the-people-given-the-group-size-they-belong-to/description/
+96. https://leetcode.com/problems/partition-array-according-to-given-pivot/description/
