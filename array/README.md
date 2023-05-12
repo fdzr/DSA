@@ -84,3 +84,5 @@
 94. https://leetcode.com/problems/sort-the-students-by-their-kth-score/submissions/911285711/
 95. https://leetcode.com/problems/group-the-people-given-the-group-size-they-belong-to/description/
 96. https://leetcode.com/problems/partition-array-according-to-given-pivot/description/
+97. https://leetcode.com/problems/left-and-right-sum-differences/description/
+98. https://leetcode.com/problems/sum-multiples/description/
