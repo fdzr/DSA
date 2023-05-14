@@ -77,4 +77,6 @@
 86. https://leetcode.com/problems/count-common-words-with-one-occurrence/description/
 87. https://leetcode.com/problems/divide-a-string-into-groups-of-size-k/description/
 88. https://leetcode.com/problems/check-whether-two-strings-are-almost-equivalent/description/
-
+90. https://leetcode.com/problems/fizz-buzz/description/
+91. https://leetcode.com/problems/count-pairs-of-similar-strings/description/
+92. https://leetcode.com/problems/unique-morse-code-words/description/
