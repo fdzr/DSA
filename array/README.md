@@ -86,3 +86,5 @@
 96. https://leetcode.com/problems/partition-array-according-to-given-pivot/description/
 97. https://leetcode.com/problems/left-and-right-sum-differences/description/
 98. https://leetcode.com/problems/sum-multiples/description/
+101. https://leetcode.com/problems/design-an-ordered-stream/description/
+102. https://leetcode.com/problems/maximum-sum-with-exactly-k-elements/description/
