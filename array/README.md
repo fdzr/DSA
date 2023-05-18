@@ -91,3 +91,4 @@
 103. https://leetcode.com/problems/finding-the-users-active-minutes/description/
 104. https://leetcode.com/problems/arithmetic-subarrays/description/
 105. https://leetcode.com/problems/rearrange-array-elements-by-sign/description/
+106. https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/description/
