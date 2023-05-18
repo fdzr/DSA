@@ -82,5 +82,12 @@
 92. https://leetcode.com/problems/smallest-index-with-equal-value/description/
 93. https://leetcode.com/problems/last-stone-weight/submissions/910536631/
 94. https://leetcode.com/problems/sort-the-students-by-their-kth-score/submissions/911285711/
+95. https://leetcode.com/problems/group-the-people-given-the-group-size-they-belong-to/description/
+96. https://leetcode.com/problems/partition-array-according-to-given-pivot/description/
 97. https://leetcode.com/problems/left-and-right-sum-differences/description/
 98. https://leetcode.com/problems/sum-multiples/description/
+101. https://leetcode.com/problems/design-an-ordered-stream/description/
+102. https://leetcode.com/problems/maximum-sum-with-exactly-k-elements/description/
+103. https://leetcode.com/problems/finding-the-users-active-minutes/description/
+104. https://leetcode.com/problems/arithmetic-subarrays/description/
+105. https://leetcode.com/problems/rearrange-array-elements-by-sign/description/
