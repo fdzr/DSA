@@ -92,3 +92,5 @@
 104. https://leetcode.com/problems/arithmetic-subarrays/description/
 105. https://leetcode.com/problems/rearrange-array-elements-by-sign/description/
 106. https://leetcode.com/problems/minimize-maximum-pair-sum-in-array/description/
+107. https://leetcode.com/problems/find-the-prefix-common-array-of-two-arrays/description/
+108. https://leetcode.com/problems/watering-plants/description/
