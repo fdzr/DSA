@@ -97,3 +97,4 @@
 109. https://leetcode.com/problems/difference-between-ones-and-zeros-in-row-and-column/description/
 110. https://leetcode.com/problems/maximum-number-of-coins-you-can-get/description/
 111. https://leetcode.com/problems/count-number-of-distinct-integers-after-reverse-operations/description/
+112. https://leetcode.com/problems/find-triangular-sum-of-an-array/description/
