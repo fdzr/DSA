@@ -11,26 +11,24 @@ public:
     }
     
     void visit(string url) {
-        if (in) {
-            historial.erase(historial.begin() + index + 1);
-        }
-            
+        historial.erase(historial.begin() + index + 1, historial.end());
         historial.push_back(url);
         index = (in)? index: index + 1;
-        
     }
     
     string back(int steps) {
         in = true;
-        index = (steps > index)? 0: index - steps;
-
+        index -= steps;
+        index = (index < 0)? 0: index;
+        
         return historial[index];
     }
     
     string forward(int steps) {
         in = true;
         int n = historial.size();
-        index = (steps + index > n - 1)? n - 1: index + steps;
+        index += steps;
+        index = (index >= n)? n - 1: index;
 
         return historial[index];
     }

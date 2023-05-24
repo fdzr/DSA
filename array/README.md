@@ -98,3 +98,4 @@
 110. https://leetcode.com/problems/maximum-number-of-coins-you-can-get/description/
 111. https://leetcode.com/problems/count-number-of-distinct-integers-after-reverse-operations/description/
 112. https://leetcode.com/problems/find-triangular-sum-of-an-array/description/
+113. https://leetcode.com/problems/design-browser-history/description/
