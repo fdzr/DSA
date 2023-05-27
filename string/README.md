@@ -81,3 +81,4 @@
 91. https://leetcode.com/problems/count-pairs-of-similar-strings/description/
 92. https://leetcode.com/problems/unique-morse-code-words/description/
 93. https://leetcode.com/problems/number-of-pairs-of-strings-with-concatenation-equal-to-target/description/
+94. https://leetcode.com/problems/encode-and-decode-tinyurl/description/
