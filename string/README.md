@@ -84,3 +84,4 @@
 94. https://leetcode.com/problems/encode-and-decode-tinyurl/description/
 95. https://leetcode.com/problems/maximum-number-of-words-you-can-type/description/
 96. https://leetcode.com/problems/valid-palindrome/description/?envType=study-plan-v2&envId=top-interview-150
+97. https://leetcode.com/problems/decode-string/description/?envType=study-plan-v2&envId=leetcode-75
