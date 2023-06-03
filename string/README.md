@@ -83,3 +83,4 @@
 93. https://leetcode.com/problems/number-of-pairs-of-strings-with-concatenation-equal-to-target/description/
 94. https://leetcode.com/problems/encode-and-decode-tinyurl/description/
 95. https://leetcode.com/problems/maximum-number-of-words-you-can-type/description/
+96. https://leetcode.com/problems/valid-palindrome/description/?envType=study-plan-v2&envId=top-interview-150
