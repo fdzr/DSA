@@ -99,3 +99,4 @@
 111. https://leetcode.com/problems/count-number-of-distinct-integers-after-reverse-operations/description/
 112. https://leetcode.com/problems/find-triangular-sum-of-an-array/description/
 113. https://leetcode.com/problems/design-browser-history/description/
+114. https://leetcode.com/problems/subrectangle-queries/description/
