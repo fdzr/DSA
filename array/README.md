@@ -101,3 +101,4 @@
 113. https://leetcode.com/problems/design-browser-history/description/
 114. https://leetcode.com/problems/subrectangle-queries/description/
 115. https://leetcode.com/problems/rotate-array/description/?envType=study-plan-v2&envId=top-interview-150
+116. https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/?envType=study-plan-v2&envId=top-interview-150
