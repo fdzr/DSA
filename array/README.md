@@ -107,3 +107,4 @@
 121. https://leetcode.com/problems/reverse-words-in-a-string/description/?envType=study-plan-v2&envId=leetcode-75
 125. https://leetcode.com/problems/queries-on-a-permutation-with-key/description/
 126. https://leetcode.com/problems/design-a-stack-with-increment-operation/description/
+127. https://leetcode.com/problems/smallest-number-in-infinite-set/description/
