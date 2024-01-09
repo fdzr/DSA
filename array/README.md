@@ -108,3 +108,10 @@
 122. https://leetcode.com/problems/build-an-array-with-stack-operations/description/
 123. https://leetcode.com/problems/find-the-winner-of-the-circular-game/description/
 124. https://leetcode.com/problems/convert-an-array-into-a-2d-array-with-conditions/description/
+125. https://leetcode.com/problems/queries-on-a-permutation-with-key/description/
+126. https://leetcode.com/problems/design-a-stack-with-increment-operation/description/
+127. https://leetcode.com/problems/smallest-number-in-infinite-set/description/
+128. https://leetcode.com/problems/sort-characters-by-frequency/description/
+129. https://leetcode.com/problems/reduce-array-size-to-the-half/description/
+130. https://leetcode.com/problems/seat-reservation-manager/description/
+
