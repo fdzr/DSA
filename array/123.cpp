@@ -10,7 +10,7 @@ int findTheWinner(int n, int k) {
     while(players.size() != 1) {
         index = (index + k - 1) % players.size();
         
-        erase(players, players[index]);
+        players.erase(players.begin() + index);
 
     }
 

@@ -17,7 +17,7 @@ vector<int> runningSum(vector<int> &nums) {
 
 int main() {
     vector<int> vc = {1,2,3,4,5};
-    vector<long long int> ans = runningSum(vc);
+    vector<int> ans = runningSum(vc);
     cout<<ans;
 
     return 0;

@@ -22,7 +22,6 @@ string firstPalindrome(vector<string>& words) {
 }
 
 
-
 int main() {
     vector<string> words = {"def","ghi"};
     cout<<firstPalindrome(words);
