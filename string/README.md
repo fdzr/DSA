@@ -87,3 +87,4 @@
 97. https://leetcode.com/problems/decode-string/description/?envType=study-plan-v2&envId=leetcode-75
 98. https://leetcode.com/problems/remove-letter-to-equalize-frequency/description/
 99. https://leetcode.com/problems/find-and-replace-pattern/description/
+100. https://leetcode.com/problems/adding-spaces-to-a-string/description/
