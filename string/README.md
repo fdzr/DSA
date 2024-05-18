@@ -88,3 +88,6 @@
 98. https://leetcode.com/problems/remove-letter-to-equalize-frequency/description/
 99. https://leetcode.com/problems/find-and-replace-pattern/description/
 100. https://leetcode.com/problems/adding-spaces-to-a-string/description/
+101. https://leetcode.com/problems/lexicographically-smallest-palindrome/description/
+102. https://leetcode.com/problems/sort-vowels-in-a-string/description/
+103. https://leetcode.com/problems/evaluate-the-bracket-pairs-of-a-string/description/
