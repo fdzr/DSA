@@ -118,3 +118,4 @@
 132. https://leetcode.com/problems/k-closest-points-to-origin/description/
 134. https://leetcode.com/problems/kth-largest-element-in-an-array/description/
 135. https://leetcode.com/problems/find-players-with-zero-or-one-losses/description/
+136. https://leetcode.com/problems/validate-stack-sequences/description/
