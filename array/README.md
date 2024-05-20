@@ -121,3 +121,4 @@
 136. https://leetcode.com/problems/validate-stack-sequences/description/
 137. https://leetcode.com/problems/boats-to-save-people/description/
 138. https://leetcode.com/problems/container-with-most-water/description/
+139. https://leetcode.com/problems/minimum-amount-of-time-to-fill-cups/description/
