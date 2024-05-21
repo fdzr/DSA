@@ -123,3 +123,5 @@
 138. https://leetcode.com/problems/container-with-most-water/description/
 139. https://leetcode.com/problems/minimum-amount-of-time-to-fill-cups/description/
 140. https://leetcode.com/problems/check-if-n-and-its-double-exist/description/
+141. https://leetcode.com/problems/house-robber/description/
+142. https://leetcode.com/problems/maximum-ice-cream-bars/description/
