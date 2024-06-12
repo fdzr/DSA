@@ -44,7 +44,7 @@ ostream &operator<<(ostream &out, const Person &p)
     return out;
 }
 
-void testVecor()
+void testVector()
 {
     vector<int> v;
     v.reserve(100);
@@ -66,12 +66,33 @@ void testString()
 void testBitMasks()
 {
     int x = 16;
-    cout<<(x & (x - 1));
+    cout << (x & (x - 1));
 }
 
 int main()
 {
-    testBitMasks();
+    // auto fib = [i = 0, j = 1]() mutable
+    // {
+    //     i = exchange(i, j + i);
+    //     return i;
+    // };
+
+    // cout << fib();
+
+    // for(int i = 0; i < 26; ++i) {
+    //     char ch = i + 'A';
+    //     cout<<ch<<endl;
+    // }
+
+    // int a = 1;
+    // int b = 2;
+    // exchange(a, b);
+    // cout<<a;
+    // cout<<endl<<b;
+
+    // cout << boolalpha;
+
+    
 
     return 0;
 }
