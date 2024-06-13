@@ -92,3 +92,5 @@
 102. https://leetcode.com/problems/sort-vowels-in-a-string/description/
 103. https://leetcode.com/problems/evaluate-the-bracket-pairs-of-a-string/description/
 105. https://leetcode.com/problems/find-the-difference/description/
+106. https://leetcode.com/problems/rearrange-words-in-a-sentence/description/
+107. https://leetcode.com/problems/valid-word/description/

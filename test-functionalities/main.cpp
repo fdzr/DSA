@@ -44,7 +44,7 @@ ostream &operator<<(ostream &out, const Person &p)
     return out;
 }
 
-void testVecor()
+void testVector()
 {
     vector<int> v;
     v.reserve(100);
@@ -66,7 +66,7 @@ void testString()
 void testBitMasks()
 {
     int x = 16;
-    cout<<(x & (x - 1));
+    cout << (x & (x - 1));
 }
 
 int main()
