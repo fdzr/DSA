@@ -132,3 +132,5 @@
 147. https://leetcode.com/problems/jump-game/description/
 148. https://leetcode.com/problems/sort-colors/description/
 149. https://leetcode.com/problems/find-the-duplicate-number/description/
+150. https://leetcode.com/problems/find-the-xor-of-numbers-which-appear-twice/description/
+151. https://leetcode.com/problems/single-number-ii/description/
