@@ -140,3 +140,4 @@
 155. https://leetcode.com/problems/binary-search/description/
 156. https://leetcode.com/problems/check-if-all-1s-are-at-least-length-k-places-away/description/
 157. https://leetcode.com/problems/most-profit-assigning-work/description/
+158. https://leetcode.com/problems/word-pattern/description/
