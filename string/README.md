@@ -99,3 +99,4 @@
 110. https://leetcode.com/problems/shortest-distance-to-a-character/description/
 111. https://leetcode.com/problems/clear-digits/description/
 112. https://leetcode.com/problems/backspace-string-compare/description/
+113. https://leetcode.com/problems/apply-operations-to-make-string-empty/description/
