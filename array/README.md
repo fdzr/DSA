@@ -134,3 +134,10 @@
 149. https://leetcode.com/problems/find-the-duplicate-number/description/
 150. https://leetcode.com/problems/find-the-xor-of-numbers-which-appear-twice/description/
 151. https://leetcode.com/problems/single-number-ii/description/
+152. https://leetcode.com/problems/find-winner-on-a-tic-tac-toe-game/description/
+153. https://leetcode.com/problems/form-smallest-number-from-two-digit-arrays/description/
+154. https://leetcode.com/problems/second-largest-digit-in-a-string/description/
+155. https://leetcode.com/problems/binary-search/description/
+156. https://leetcode.com/problems/check-if-all-1s-are-at-least-length-k-places-away/description/
+157. https://leetcode.com/problems/most-profit-assigning-work/description/
+158. https://leetcode.com/problems/word-pattern/description/
