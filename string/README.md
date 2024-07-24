@@ -94,3 +94,7 @@
 105. https://leetcode.com/problems/find-the-difference/description/
 106. https://leetcode.com/problems/rearrange-words-in-a-sentence/description/
 107. https://leetcode.com/problems/valid-word/description/
+108. https://leetcode.com/problems/remove-trailing-zeros-from-a-string/description/
+109. https://leetcode.com/problems/number-of-senior-citizens/description/
+110. https://leetcode.com/problems/shortest-distance-to-a-character/description/
+111. https://leetcode.com/problems/clear-digits/description/
