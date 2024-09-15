@@ -141,3 +141,4 @@
 156. https://leetcode.com/problems/check-if-all-1s-are-at-least-length-k-places-away/description/
 157. https://leetcode.com/problems/most-profit-assigning-work/description/
 158. https://leetcode.com/problems/word-pattern/description/
+159. https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/
