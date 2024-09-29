@@ -2,7 +2,8 @@ from typing import List
 
 
 def findContentChildren(g: List[int], s: List[int]) -> int:
-    g.sort(reverse=True), s.sort(reverse=True)
+    g.sort(reverse=True)
+    s.sort(reverse=True)
     indexSize, output = 0, 0
 
     for _, value in enumerate(g):
