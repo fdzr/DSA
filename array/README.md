@@ -155,3 +155,4 @@
 171. https://leetcode.com/problems/distribute-candies/description/
 172. https://leetcode.com/problems/degree-of-an-array/description/
 173. https://leetcode.com/problems/valid-perfect-square/description/
+174. https://leetcode.com/problems/first-bad-version/description/
