@@ -156,6 +156,6 @@
 172. https://leetcode.com/problems/degree-of-an-array/description/
 173. https://leetcode.com/problems/valid-perfect-square/description/
 174. https://leetcode.com/problems/first-bad-version/description/
-176. https://leetcode.com/problems/arranging-coins/description/
-177. https://leetcode.com/problems/sort-array-by-parity/description/
+175. https://leetcode.com/problems/arranging-coins/description/
+176. https://leetcode.com/problems/sort-array-by-parity/description/
 177. https://leetcode.com/problems/find-the-child-who-has-the-ball-after-k-seconds/description/
