@@ -106,3 +106,4 @@
 117. https://leetcode.com/problems/check-if-string-is-a-prefix-of-array/description/
 118. https://leetcode.com/problems/first-unique-character-in-a-string/description/
 119. https://leetcode.com/problems/add-strings/description/
+120. https://leetcode.com/problems/remove-digit-from-number-to-maximize-result/description/
