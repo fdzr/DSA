@@ -75,23 +75,19 @@ int main()
     // for(int i = 0; i < 10000000; ++i){
     //     printf("%d\n", i);
     // }
-    
+
     // auto e = std::chrono::high_resolution_clock::now();
     // auto d = std::chrono::duration_cast<std::chrono::seconds>(e - s);
     // printf("%ld\n", d.count());
-    
-    vector<int> v{1,2};
-    auto a = move(v);
-    cout<<a[0]<<endl;
-    cout<<a[1]<<endl;
-    
-    cout<<(&v == nullptr)<<endl;
-    
-    
-        
-    
 
-    
+    vector<int> v{1, 2};
+    auto a = move(v);
+    cout << a[0] << endl;
+    cout << a[1] << endl;
+
+    cout << (&v == nullptr) << endl;
+
+    __builtin_popcount(128);
 
     return 0;
 }
