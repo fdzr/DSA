@@ -1,16 +1,16 @@
 #include <iostream>
 #include <queue>
-#include "tree.h"
+#include "../common/tree.h"
 
 using namespace std;
+using namespace Tree;
 
-
-void levelOrder(Node* root){
+void levelOrder(TreeNode* root){
     if(!root)
         return;
 
-    queue<Node *> q;
-    Node* tmp;
+    queue<TreeNode *> q;
+    TreeNode* tmp;
 
     q.push(root);
     q.push(nullptr);
@@ -29,13 +29,13 @@ void levelOrder(Node* root){
             if(tmp->right)
                 q.push(tmp->right);
 
-            cout<<tmp->key<<" ";
+            cout<<tmp->val<<" ";
         }
     }
 }
 
 int main(){
-    Node* root = createNode(1);
+    TreeNode* root = createNode(1);
     root->left = createNode(2);
     root->right = createNode(3);
     root->left->left = createNode(4);
