@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/fair-candy-swap/
+// O(n*m)
 #include <bits/stdc++.h>
 
 using namespace std;

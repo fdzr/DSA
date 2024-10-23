@@ -1,6 +1,7 @@
 from typing import List
 
 
+# O(n + m)
 def fairCandySwap(aliceSizes: List[int], bobSizes: List[int]) -> List[int]:
     a = set(aliceSizes)
     b = set(bobSizes)
