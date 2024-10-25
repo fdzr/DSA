@@ -66,6 +66,17 @@ public:
         tail = auxHead;
     }
 
+    void clear() {
+        Node *temp = head, *aux = nullptr;
+        while(temp != nullptr) {
+            aux = temp->next;
+            delete temp;
+            temp = aux;
+        }
+
+        head = nullptr, tail = nullptr;
+    }
+
     void print()
     {
         Node *tmp = head;

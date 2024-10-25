@@ -21,6 +21,9 @@ int main() {
     l.reverse();
     l.print();
 
+    l.clear();
+    l.print();
+
     
     
 
