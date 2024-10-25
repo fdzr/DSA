@@ -13,6 +13,7 @@ def permutations(input):
                 solution.append(num)
                 backtrack()
                 solution.pop()
+                print(num)
 
     return backtrack()
 
