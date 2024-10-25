@@ -52,7 +52,7 @@ public:
 
     void reverse()
     {
-        Node *temp = head, *aux, *auxHead=head, *prev = nullptr;
+        Node *temp = head, *aux, *auxHead = head, *prev = nullptr;
 
         while (temp != nullptr)
         {
@@ -66,15 +66,32 @@ public:
         tail = auxHead;
     }
 
-    void clear() {
+    void clear()
+    {
         Node *temp = head, *aux = nullptr;
-        while(temp != nullptr) {
+        while (temp != nullptr)
+        {
             aux = temp->next;
             delete temp;
             temp = aux;
         }
 
         head = nullptr, tail = nullptr;
+    }
+
+    std::pair<bool, Node *> search(int key)
+    {
+        Node *temp = head;
+        while (temp != nullptr)
+        {
+            if (temp->value == key)
+            {
+                return std::make_pair(true, temp);
+            }
+            temp = temp->next;
+        }
+
+        return {false, nullptr};
     }
 
     void print()
@@ -87,6 +104,6 @@ public:
             tmp = tmp->next;
         }
 
-        std::cout<<"\n";
+        std::cout << "\n";
     }
 };

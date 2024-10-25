@@ -21,10 +21,17 @@ int main() {
     l.reverse();
     l.print();
 
+    // l.clear();
+    // l.print();
+
+    auto const&[found, node] = l.search(14);
+    cout<<boolalpha<<found<<"\n";
+
+    auto p = l.search(10);
+    cout<<p.second->value<<"\n";
+
     l.clear();
     l.print();
-
-    
     
 
 }
