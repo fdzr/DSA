@@ -102,7 +102,8 @@ public:
 
         Node *temp = head;
 
-        if(temp == result.second) {
+        if (temp == result.second)
+        {
             head = head->next;
             delete temp;
             return true;
@@ -111,11 +112,38 @@ public:
         while (temp->next != result.second)
             temp = temp->next;
 
-        Node* aux = temp->next;
+        Node *aux = temp->next;
         temp->next = result.second->next;
         delete aux;
-        
+
         return true;
+    }
+
+    Node *findMiddleNode()
+    {
+        if (head == nullptr)
+            return nullptr;
+
+        Node *fast = head, *slow = head;
+        while (fast && fast->next)
+        {
+            slow = slow->next;
+            fast = fast->next->next;
+        }
+
+        return slow;
+    }
+
+    Node *getNthNode(int n)
+    {
+        if (n < 0 || this->size() <= n)
+            return nullptr;
+
+        Node *temp = head;
+        while (n-- > 0)
+            temp = temp->next;
+
+        return temp;
     }
 
     void print()

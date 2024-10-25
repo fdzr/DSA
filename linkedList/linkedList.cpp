@@ -9,6 +9,9 @@ int main() {
     for(int i = 1; i <= 10; ++i)
         l.insertAtFront(i);
 
+    Node* result = l.findMiddleNode();
+    cout<<result->value<<"\n";
+
     l.print();
 
     l.reverse();
@@ -40,8 +43,12 @@ int main() {
     l.removeKey(15);
     l.print();
 
+    auto temp = l.getNthNode(3);
+    cout<<temp->value<<"\n";
+
     l.clear();
     l.print();
-    
 
+    return 0;
+    
 }
