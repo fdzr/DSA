@@ -80,7 +80,14 @@ int main()
         
     
 
-    
+    vector<int> v{1, 2};
+    auto a = move(v);
+    cout << a[0] << endl;
+    cout << a[1] << endl;
+
+    cout << (&v == nullptr) << endl;
+
+    __builtin_popcount(128);
 
     return 0;
 }
