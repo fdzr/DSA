@@ -94,6 +94,30 @@ public:
         return {false, nullptr};
     }
 
+    bool removeKey(int key)
+    {
+        std::pair<bool, Node *> result = this->search(key);
+        if (result.first == false)
+            return false;
+
+        Node *temp = head;
+
+        if(temp == result.second) {
+            head = head->next;
+            delete temp;
+            return true;
+        }
+
+        while (temp->next != result.second)
+            temp = temp->next;
+
+        Node* aux = temp->next;
+        temp->next = result.second->next;
+        delete aux;
+        
+        return true;
+    }
+
     void print()
     {
         Node *tmp = head;

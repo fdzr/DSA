@@ -21,14 +21,24 @@ int main() {
     l.reverse();
     l.print();
 
-    // l.clear();
-    // l.print();
+ 
 
     auto const&[found, node] = l.search(14);
     cout<<boolalpha<<found<<"\n";
 
     auto p = l.search(10);
     cout<<p.second->value<<"\n";
+
+    bool removed = l.removeKey(10);
+    cout<<boolalpha<<removed<<"\n";
+    l.print();
+
+    l.removeKey(-1);
+    l.print();
+    l.removeKey(11);
+    l.print();
+    l.removeKey(15);
+    l.print();
 
     l.clear();
     l.print();
