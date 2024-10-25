@@ -15,5 +15,7 @@ int main() {
     l.insertAtFront(10);
 
     l.print();
+    cout<<"\n";
+    cout<<l.size();
 
 }
