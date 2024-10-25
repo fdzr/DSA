@@ -9,6 +9,11 @@ int main() {
     for(int i = 0; i < 10; ++i)
         l.insertAtFront(i);
 
+    for(int i = 1; i < 10; ++i)
+        l.insertAtEnd(i);
+
+    l.insertAtFront(10);
+
     l.print();
 
 }
