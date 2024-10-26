@@ -46,6 +46,9 @@ int main() {
     auto temp = l.getNthNode(3);
     cout<<temp->value<<"\n";
 
+    auto ans = l.getNthNodeFromTheEnd(5);
+    cout<<ans->value<<"\n";
+    
     l.clear();
     l.print();
 

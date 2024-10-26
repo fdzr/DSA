@@ -146,6 +146,24 @@ public:
         return temp;
     }
 
+    Node *getNthNodeFromTheEnd(int n)
+    {
+        if (n < 0 || this->size() <= n)
+            return nullptr;
+
+        Node *temp = head;
+        Node *aux = head;
+        while (n-- > 0)
+            temp = temp->next;
+
+        while(temp != nullptr) {
+            temp = temp->next;
+            aux = aux->next;
+        }
+
+        return aux;
+    }
+
     void print()
     {
         Node *tmp = head;
