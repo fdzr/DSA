@@ -82,6 +82,33 @@ public:
         return true;
     }
 
+    bool deleteNode(int value)
+    {
+        if (this->isEmpty())
+            return false;
+
+        Node *aux = tail->next;
+        Node *prev = tail;
+
+        while (true)
+        {
+            if (aux->value == value)
+            {
+                prev->next = aux->next;
+                delete aux;
+                return true;
+            }
+
+            if(aux == tail)
+                return false;
+
+            prev = aux;
+            aux = aux->next;
+        }
+
+        return false;
+    }
+
     bool isEmpty()
     {
         return tail == nullptr;

@@ -38,6 +38,10 @@ int main() {
 
     c->deleteFirstNode();
     c->print();
+    cout<<c->size()<<"\n";
+
+    c->deleteNode(11);
+    c->print();
     cout<<c->size();
 
     return 0;
