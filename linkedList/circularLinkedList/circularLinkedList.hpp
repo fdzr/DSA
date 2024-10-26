@@ -26,6 +26,22 @@ public:
         return true;
     }
 
+    void insertAtEnd(int value)
+    {
+        Node *newNode = new Node(value);
+        if (this->isEmpty())
+        {
+            tail = newNode;
+            tail->next = tail;
+        }
+        else
+        {
+            newNode->next = tail->next;
+            tail->next = newNode;
+            tail = newNode;
+        }
+    }
+
     bool isEmpty()
     {
         return tail == nullptr;

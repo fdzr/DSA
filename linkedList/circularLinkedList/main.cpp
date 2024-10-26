@@ -9,5 +9,10 @@ int main() {
     c->insertAtFront(9);
     c->print();
 
+    c->insertAtEnd(11);
+    c->insertAtEnd(12);
+    c->insertAtFront(8);
+    c->print();
+
     return 0;
 }
