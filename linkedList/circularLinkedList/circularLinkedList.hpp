@@ -44,7 +44,8 @@ public:
 
     bool insertAtSpecificPosition(int pos, int value)
     {
-        if (pos < 1 || pos > this->size())
+        int len = this->size();
+        if (pos < 1 || pos > len)
             return false;
 
         Node *prev = nullptr;
@@ -59,6 +60,8 @@ public:
 
         newNode->next = temp;
         prev->next = newNode;
+        if(len == pos)
+            tail = newNode;
 
         return true;
     }

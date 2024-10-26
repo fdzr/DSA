@@ -26,7 +26,10 @@ int main() {
     cout<<c->size()<<"\n";
 
     bool inserted = c->insertAtSpecificPosition(-1, 69);
-    cout<<boolalpha<<inserted;
+    cout<<boolalpha<<inserted<<"\n";
+
+    c->insertAtSpecificPosition(8, 89);
+    c->print();
 
     return 0;
 }
