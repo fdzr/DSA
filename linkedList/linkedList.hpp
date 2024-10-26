@@ -156,7 +156,8 @@ public:
         while (n-- > 0)
             temp = temp->next;
 
-        while(temp != nullptr) {
+        while (temp != nullptr)
+        {
             temp = temp->next;
             aux = aux->next;
         }
