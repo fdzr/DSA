@@ -42,9 +42,47 @@ public:
         }
     }
 
+    bool insertAtSpecificPosition(int pos, int value)
+    {
+        if (pos < 1 || pos > this->size())
+            return false;
+
+        Node *prev = nullptr;
+        Node *temp = tail;
+        Node *newNode = new Node(value);
+
+        while (pos-- > 0)
+        {
+            prev = temp;
+            temp = temp->next;
+        }
+
+        newNode->next = temp;
+        prev->next = newNode;
+
+        return true;
+    }
+
     bool isEmpty()
     {
         return tail == nullptr;
+    }
+
+    int size()
+    {
+        if (tail == nullptr)
+            return 0;
+
+        Node *temp = tail->next;
+        int cont = 1;
+
+        while (temp != tail)
+        {
+            cont++;
+            temp = temp->next;
+        }
+
+        return cont;
     }
 
     void print()
