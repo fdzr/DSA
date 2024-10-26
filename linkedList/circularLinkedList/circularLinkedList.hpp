@@ -60,8 +60,19 @@ public:
 
         newNode->next = temp;
         prev->next = newNode;
-        if(len == pos)
+        if (len == pos)
             tail = newNode;
+
+        return true;
+    }
+
+    bool deleteFirstNode()
+    {
+        if(this->isEmpty()) return false;
+
+        Node *aux = tail->next;
+        tail->next = aux->next;
+        delete aux;
 
         return true;
     }

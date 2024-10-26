@@ -29,7 +29,12 @@ int main() {
     cout<<boolalpha<<inserted<<"\n";
 
     c->insertAtSpecificPosition(8, 89);
+    cout<<c->size()<<"\n";
     c->print();
+
+    c->deleteFirstNode();
+    c->print();
+    cout<<c->size()<<"\n";
 
     return 0;
 }
