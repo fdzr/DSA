@@ -95,11 +95,14 @@ public:
             if (aux->value == value)
             {
                 prev->next = aux->next;
+                if (aux == tail)
+                    tail = prev;
+
                 delete aux;
                 return true;
             }
 
-            if(aux == tail)
+            if (aux == tail)
                 return false;
 
             prev = aux;

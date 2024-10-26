@@ -44,5 +44,9 @@ int main() {
     c->print();
     cout<<c->size();
 
+    c->deleteNode(12);
+    c->print();
+    cout<<c->size();
+
     return 0;
 }
