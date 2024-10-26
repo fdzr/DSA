@@ -36,5 +36,9 @@ int main() {
     c->print();
     cout<<c->size()<<"\n";
 
+    c->deleteFirstNode();
+    c->print();
+    cout<<c->size();
+
     return 0;
 }

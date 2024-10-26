@@ -68,10 +68,15 @@ public:
 
     bool deleteFirstNode()
     {
-        if(this->isEmpty()) return false;
+        if (this->isEmpty())
+            return false;
 
         Node *aux = tail->next;
         tail->next = aux->next;
+
+        if (aux == tail)
+            tail = nullptr;
+
         delete aux;
 
         return true;
