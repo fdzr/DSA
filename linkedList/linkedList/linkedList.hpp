@@ -165,6 +165,24 @@ public:
         return aux;
     }
 
+    LinkedList *intersection(LinkedList *obj)
+    {
+        LinkedList *temp = new LinkedList;
+        Node *aux = head;
+        while (aux != nullptr)
+        {
+            auto const &[found, nod] = obj->search(aux->value);
+            if (found)
+            {
+                temp->insertAtEnd(nod->value);
+            }
+
+            aux = aux->next;
+        }
+
+        return temp;
+    }
+
     void print()
     {
         Node *tmp = head;

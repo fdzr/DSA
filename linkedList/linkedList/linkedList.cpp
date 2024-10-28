@@ -43,14 +43,23 @@ int main() {
     l.removeKey(15);
     l.print();
 
-    auto temp = l.getNthNode(3);
-    cout<<temp->value<<"\n";
+    LinkedList *j = new LinkedList;
+    j->insertAtEnd(6);
+    j->insertAtEnd(7);
+    j->insertAtEnd(29);
+    j->print();
 
-    auto ans = l.getNthNodeFromTheEnd(5);
-    cout<<ans->value<<"\n";
+    LinkedList *k = j->intersection(&l);
+    k->print();
+
+    // auto temp = l.getNthNode(3);
+    // cout<<temp->value<<"\n";
+
+    // auto ans = l.getNthNodeFromTheEnd(5);
+    // cout<<ans->value<<"\n";
     
-    l.clear();
-    l.print();
+    // l.clear();
+    // l.print();
 
     return 0;
     
