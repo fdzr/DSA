@@ -11,6 +11,8 @@ int main()
     q.print();
     q.insert(3);
     q.print();
+    cout<<q.get()<<"\n";
+    q.print();
 
     return 0;
 }

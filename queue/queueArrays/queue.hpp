@@ -24,6 +24,17 @@ public:
         ++size;
     }
 
+    int get()
+    {
+        if (size == 0)
+            throw std::runtime_error("Queue is empty");
+
+        int value = arr[front];
+        front = (front + 1) % capacity;
+        --size;
+        return value;
+    }
+
     void resize()
     {
         int *temp = new int[capacity * 2];
@@ -40,9 +51,14 @@ public:
 
     void print()
     {
-        for(int i = 0; i < size; ++i)
-            std::cout<<arr[(front + i) % size]<<" ";
-        std::cout<<"\n";
-        
+        int temp = front;
+        while(temp != tail)
+        {
+            std::cout << arr[temp] << " ";
+            temp  = (temp + 1) % capacity;
+
+        }
+        std::cout << arr[tail] << " ";
+        std::cout << "\n";
     }
 };
