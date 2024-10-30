@@ -74,6 +74,24 @@ public:
         return arr[rear];
     }
 
+    int removeBack()
+    {
+        if (isEmpty())
+            throw runtime_error("Deque empty...");
+
+        int value = arr[rear];
+
+        rear = (rear == 0) ? size - 1 : rear - 1;
+
+        if ((rear + 1) % size == head)
+        {
+            rear = 0;
+            head = -1;
+        }
+
+        return value;
+    }
+
     bool isFull()
     {
         return rear + 1 == head || (head == 0 && rear == size - 1);
@@ -87,7 +105,10 @@ public:
     void print()
     {
         if (isEmpty())
+        {
+            cout << "\n";
             return;
+        }
 
         int temp = head;
 

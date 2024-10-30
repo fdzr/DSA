@@ -18,6 +18,20 @@ int main()
     cout<<cd.front()<<"\n";
     cout<<cd.back()<<"\n";
 
+    cd.removeBack();
+    cd.print();
+
+    cd.removeBack();
+    cd.print();
+    cd.removeBack();
+    cd.removeBack();
+    cd.removeBack();
+    cd.print();
+    cd.removeBack();
+    cd.print();
+
+    cd.removeBack();
+
 
     return 0;
 }
