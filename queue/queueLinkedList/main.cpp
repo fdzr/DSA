@@ -21,6 +21,12 @@ int main()
     q.print();
     cout << q.dequeue() << "\n";
     q.print();
+    cout<<q.peek()<<"\n";
+    q.print();
+    q.dequeue();
+    q.dequeue();
+    q.print();
+    cout<<q.getSize()<<"\n";
 
     return 0;
 }

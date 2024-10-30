@@ -30,17 +30,30 @@ public:
 
     int dequeue()
     {
-        if(this->isEmpty()) {
+        if (this->isEmpty())
+        {
             throw runtime_error("Queue is empty");
         }
 
         int value = head->value;
-        Node* aux = head;
+        Node *aux = head;
         head = head->next;
         --size;
         delete aux;
 
         return value;
+    }
+
+    int peek()
+    {
+        if(isEmpty())
+            throw runtime_error("Queue is empty");
+
+        return head->value;
+    }
+
+    int getSize() {
+        return size;
     }
 
     bool isEmpty()
