@@ -28,6 +28,26 @@ public:
         ++size;
     }
 
+    int dequeue()
+    {
+        if(this->isEmpty()) {
+            throw runtime_error("Queue is empty");
+        }
+
+        int value = head->value;
+        Node* aux = head;
+        head = head->next;
+        --size;
+        delete aux;
+
+        return value;
+    }
+
+    bool isEmpty()
+    {
+        return size == 0 && head == nullptr && tail == nullptr;
+    }
+
     void print()
     {
         if (head == nullptr)
