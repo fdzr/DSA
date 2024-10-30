@@ -5,14 +5,14 @@ using namespace std;
 class CircularDeque
 {
     int *arr;
-    int front, rear;
+    int head, rear;
     int size;
 
 public:
     CircularDeque(int _capacity)
     {
         size = _capacity;
-        front = -1;
+        head = -1;
         rear = 0;
         arr = new int[size];
     }
@@ -24,21 +24,21 @@ public:
 
         if (isEmpty())
         {
-            ++front;
+            ++head;
             rear = 0;
-            arr[front] = value;
+            arr[head] = value;
             return;
         }
-        if (front == 0)
+        if (head == 0)
         {
-            front = size - 1;
+            head = size - 1;
         }
         else
         {
-            --front;
+            --head;
         }
 
-        arr[front] = value;
+        arr[head] = value;
     }
 
     void insertRear(int value)
@@ -48,9 +48,9 @@ public:
 
         if (isEmpty())
         {
-            front = 0;
+            head = 0;
             rear = 0;
-            arr[front] = value;
+            arr[head] = value;
             return;
         }
 
@@ -58,14 +58,30 @@ public:
         arr[rear] = value;
     }
 
+    int front()
+    {
+        if (head == -1)
+            throw runtime_error("Deque is empty...");
+
+        return arr[head];
+    }
+
+    int back()
+    {
+        if (head == -1)
+            throw runtime_error("Deque is empty...");
+
+        return arr[rear];
+    }
+
     bool isFull()
     {
-        return rear + 1 == front || (front == 0 && rear == size - 1);
+        return rear + 1 == head || (head == 0 && rear == size - 1);
     }
 
     bool isEmpty()
     {
-        return front == -1 && rear == 0;
+        return head == -1 && rear == 0;
     }
 
     void print()
@@ -73,7 +89,7 @@ public:
         if (isEmpty())
             return;
 
-        int temp = front;
+        int temp = head;
 
         while (true)
         {
@@ -85,6 +101,6 @@ public:
             temp = (temp + 1) % size;
         }
 
-        cout<<"\n";
+        cout << "\n";
     }
 };

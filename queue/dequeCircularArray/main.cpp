@@ -15,5 +15,9 @@ int main()
     cd.insertFront(6);
     cd.print();
 
+    cout<<cd.front()<<"\n";
+    cout<<cd.back()<<"\n";
+
+
     return 0;
 }
