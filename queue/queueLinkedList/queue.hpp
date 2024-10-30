@@ -1,36 +1,44 @@
 #include <bits/stdc++.h>
+#include "../../common/node.h"
 
 using namespace std;
 
 class Queue
 {
-    list<int> *q;
+    Node *head, *tail;
+    int size;
 
 public:
-    Queue() : q{new list<int>()} {}
-    
-    ~Queue()
-    {
-        cout<<"destroying..."<<"\n";
-        delete q;
-    }
+    Queue() : head{nullptr}, tail{nullptr}, size{0} {}
 
     void enqueue(int value)
     {
-        q->push_back(value);
-    }
+        Node *newNode = new Node(value);
 
-    int dequeue()
-    {
-        int val = q->front();
-        q->pop_front();
-        return val;
+        if (head == nullptr)
+        {
+            head = newNode;
+            tail = newNode;
+            ++size;
+            return;
+        }
+
+        tail->next = newNode;
+        tail = newNode;
+        ++size;
     }
 
     void print()
     {
-        for (const int &elem : *q)
-            cout << elem << " ";
-        cout<<"\n";
+        if (head == nullptr)
+            return;
+
+        Node *temp = head;
+        while (temp != tail)
+        {
+            cout << temp->value << " ";
+            temp = temp->next;
+        }
+        cout << tail->value << "\n";
     }
 };

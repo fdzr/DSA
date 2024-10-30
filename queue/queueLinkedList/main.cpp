@@ -1,18 +1,14 @@
-// #include <bits/stdc++.h>
 #include "queue.hpp"
-
-// using namespace std;
 
 int main()
 {
     Queue q;
-    q.enqueue(10);
-    q.enqueue(20);
-    q.print();
-    q.dequeue();
     q.print();
 
-    cout<<"\n";
+    q.enqueue(1);
+    q.enqueue(2);
+    q.enqueue(3);
+    q.print();
 
     return 0;
 }
