@@ -5,33 +5,33 @@ using namespace std;
 
 class Deque
 {
-    Node *front, *rear;
+    Node *head, *rear;
 
 public:
-    Deque() : front{nullptr}, rear{nullptr} {}
+    Deque() : head{nullptr}, rear{nullptr} {}
 
     void insertFront(int value)
     {
         Node *newNode = new Node(value);
 
-        if (front == nullptr)
+        if (head == nullptr)
         {
-            front = newNode;
-            rear = front;
+            head = newNode;
+            rear = head;
             return;
         }
 
-        newNode->next = front;
-        front = newNode;
+        newNode->next = head;
+        head = newNode;
     }
 
     void insertEnd(int value)
     {
         Node *newNode = new Node(value);
-        if (front == nullptr)
+        if (head == nullptr)
         {
-            front = newNode;
-            rear = front;
+            head = newNode;
+            rear = head;
             return;
         }
 
@@ -39,9 +39,25 @@ public:
         rear = newNode;
     }
 
+    int front()
+    {
+        if (isEmpty())
+            throw runtime_error("Deque empty...");
+
+        return head->value;
+    }
+
+    int back()
+    {
+        if (isEmpty())
+            throw runtime_error("Deque empty...");
+
+        return rear->value;
+    }
+
     bool isEmpty()
     {
-        return front == nullptr;
+        return head == nullptr;
     }
 
     void print()
@@ -49,7 +65,7 @@ public:
         if (isEmpty())
             return;
 
-        Node *temp = front;
+        Node *temp = head;
         while (temp != rear)
         {
             cout << temp->value << " ";

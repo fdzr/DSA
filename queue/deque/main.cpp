@@ -15,6 +15,10 @@ int main()
     d.insertEnd(-20);
     d.print();
 
+    cout<<d.front()<<"\n";
+    cout<<d.back()<<"\n";
+
+
 
     return 0;
 }
