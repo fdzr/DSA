@@ -25,6 +25,20 @@ public:
         front = newNode;
     }
 
+    void insertEnd(int value)
+    {
+        Node *newNode = new Node(value);
+        if (front == nullptr)
+        {
+            front = newNode;
+            rear = front;
+            return;
+        }
+
+        rear->next = newNode;
+        rear = newNode;
+    }
+
     bool isEmpty()
     {
         return front == nullptr;

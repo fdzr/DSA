@@ -11,5 +11,10 @@ int main()
     d.insertFront(40);
     d.print();
 
+    d.insertEnd(-10);
+    d.insertEnd(-20);
+    d.print();
+
+
     return 0;
 }
