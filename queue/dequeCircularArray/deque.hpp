@@ -92,6 +92,23 @@ public:
         return value;
     }
 
+    int removeFront()
+    {
+        if (isEmpty())
+            throw runtime_error("Deque empty...");
+
+        int val = arr[head];
+
+        head = (head + 1) % size;
+
+        if((rear + 1) % size == head) {
+            rear = 0;
+            head = -1;
+        }
+
+        return val;
+    }
+
     bool isFull()
     {
         return rear + 1 == head || (head == 0 && rear == size - 1);

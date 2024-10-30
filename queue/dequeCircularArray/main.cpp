@@ -24,13 +24,24 @@ int main()
     cd.removeBack();
     cd.print();
     cd.removeBack();
-    cd.removeBack();
-    cd.removeBack();
-    cd.print();
-    cd.removeBack();
     cd.print();
 
-    cd.removeBack();
+    cd.removeFront();
+    cd.print();
+    cd.removeFront();
+    cd.print();
+    cd.removeFront();
+    cd.print();
+    
+
+
+    // cd.removeBack();
+    // cd.removeBack();
+    // cd.print();
+    // cd.removeBack();
+    // cd.print();
+
+    // cd.removeBack();
 
 
     return 0;
