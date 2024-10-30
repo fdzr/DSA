@@ -11,6 +11,7 @@ public:
     
     ~Queue()
     {
+        cout<<"destroying..."<<"\n";
         delete q;
     }
 
@@ -30,5 +31,6 @@ public:
     {
         for (const int &elem : *q)
             cout << elem << " ";
+        cout<<"\n";
     }
 };
