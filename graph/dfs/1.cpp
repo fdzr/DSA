@@ -14,7 +14,7 @@ void DFSUtil(const Graph &G, vector<int> &visited, int source)
         if (visited[elem] == 0)
         {
             DFSUtil(G, visited, elem);
-            visited[elem] = 1;
+            // visited[elem] = 1;
         }
     }
 }
