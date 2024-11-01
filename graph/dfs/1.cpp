@@ -7,7 +7,7 @@ using Graph = vector<vector<int>>;
 void DFSUtil(const Graph &G, vector<int> &visited, int source)
 {
     visited[source] = true;
-    cout<<source<<" ";
+    cout << source << " ";
 
     for (const auto &elem : G[source])
     {
@@ -15,6 +15,19 @@ void DFSUtil(const Graph &G, vector<int> &visited, int source)
         {
             DFSUtil(G, visited, elem);
             visited[elem] = 1;
+        }
+    }
+}
+
+void DFSDisconnected(const Graph &G, int &connectedComponets)
+{
+    vector<int> visited(G.size(), 0);
+    for (int i = 0; i < G.size(); ++i)
+    {
+        if (visited[i] == 0)
+        {
+            ++connectedComponets;
+            DFSUtil(G, visited, i);
         }
     }
 }
@@ -42,6 +55,24 @@ int main()
     addEdge(G, 3, 4);
 
     DFS(G, 0);
+
+    cout << "\n";
+
+    G.clear();
+
+    G.resize(9);
+    addEdge(G, 0, 3);
+    addEdge(G, 0, 5);
+    addEdge(G, 1, 5);
+    addEdge(G, 1, 8);
+    addEdge(G, 5, 8);
+
+    addEdge(G, 4, 6);
+    addEdge(G, 6, 7);
+
+    int connectedComponents = 0;
+    DFSDisconnected(G, connectedComponents);
+    cout<<"\n"<<connectedComponents;
 
     return 0;
 }
