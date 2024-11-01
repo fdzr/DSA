@@ -28,7 +28,7 @@ void BFS(Graph G, int source, vector<int> &visited)
     }
 }
 
-void BFSDisconnected(Graph &G)
+void BFSDisconnected(Graph &G, int &connectedComponents)
 {
     vector<int> visited(G.size(), 0);
 
@@ -36,6 +36,7 @@ void BFSDisconnected(Graph &G)
     {
         if (visited[i] == 0)
         {
+            connectedComponents++;
             BFS(G, i, visited);
         }
     }
@@ -59,7 +60,9 @@ int main()
     addEdge(G, 4, 6);
     addEdge(G, 6, 7);
 
-    BFSDisconnected(G);
+    int connectedComponents = 0;
+    BFSDisconnected(G, connectedComponents);
+    cout<<"\n"<<connectedComponents;
     
 
     return 0;
