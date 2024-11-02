@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
 
+// https://www.geeksforgeeks.org/minimum-time-required-so-that-all-oranges-become-rotten/
+
 using namespace std;
 
 using Graph = vector<vector<int>>;
