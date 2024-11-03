@@ -55,6 +55,44 @@ bool BFSDisconnected(const Graph &G)
     return true;
 }
 
+bool DFS(const Graph &G, vector<int> &colored, int source)
+{
+    for (int i = 0; i < G[source].size(); ++i)
+    {
+        if (colored[G[source][i]] == -1)
+        {
+            colored[G[source][i]] = abs(colored[source] - 1);
+            DFS(G, colored, G[source][i]);
+        }
+        else
+        {
+            if (colored[G[source][i]] == colored[source])
+                return false;
+        }
+    }
+
+    return true;
+}
+
+bool DFSDisconnected(const Graph &G)
+{
+    vector<int> colored(G.size(), -1);
+    bool answer;
+
+    for (int i = 0; i < G.size(); ++i)
+    {
+        if (colored[i] == -1)
+        {
+            colored[i] = 1;
+            answer = DFS(G, colored, i);
+            if (answer == false)
+                return false;
+        }
+    }
+
+    return true;
+}
+
 void addEdge(Graph &G, int u, int v)
 {
     G[u].push_back(v);
@@ -69,7 +107,9 @@ int main()
     addEdge(G, 1, 3);
     addEdge(G, 2, 3);
 
-    cout<<boolalpha<<BFSDisconnected(G);
+    cout << boolalpha << BFSDisconnected(G);
+    ENDL;
+    cout << boolalpha << DFSDisconnected(G);
 
     ENDL;
 
@@ -81,9 +121,11 @@ int main()
     addEdge(G, 0, 3);
     addEdge(G, 1, 2);
 
-    cout<<boolalpha<<BFSDisconnected(G);
-
+    cout << boolalpha << BFSDisconnected(G);
     ENDL;
+    cout << boolalpha << BFSDisconnected(G);
+    ENDL;
+
 
     return 0;
 }
