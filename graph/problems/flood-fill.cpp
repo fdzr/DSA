@@ -2,6 +2,8 @@
 
 using namespace std;
 
+#define ENDL cout << "\n"
+
 using Graph = vector<vector<int>>;
 using Matrix = Graph;
 
@@ -45,8 +47,37 @@ void floodFill(Graph &G, int newColor, pair<int, int> coordinates)
     // }
 }
 
-void BFS()
+void BFS(Graph &G, Matrix &visited, int row, int col, int newColor)
 {
+    queue<pair<int, int>> q;
+    q.push(make_pair(row, col));
+    visited[row][col] = 1;
+    G[row][col] = newColor;
+
+    while (!q.empty())
+    {
+        pair<int, int> par = q.front();
+        q.pop();
+
+        for (int i = 0; i < 4; ++i)
+        {
+            int newPosRows = par.first + posRows[i];
+            int newPosCols = par.second + posCols[i];
+
+            if (isValid(G, visited, newPosRows, newPosCols, newColor))
+            {
+                visited[newPosRows][newPosCols] = 1;
+                G[newPosRows][newPosCols] = newColor;
+                q.push({newPosRows, newPosCols});
+            }
+        }
+    }
+}
+
+void floodFillBFS(Graph &G, int newColor, const pair<int, int> &coordinates)
+{
+    Matrix visited(G.size(), vector<int>(G[0].size(), 0));
+    BFS(G, visited, coordinates.first, coordinates.second, newColor);
 }
 
 void printMatrix(const Graph &G)
@@ -66,10 +97,24 @@ int main()
     G[0] = {1, 1, 1};
     G[1] = {1, 1, 0};
     G[2] = {1, 0, 1};
+    auto GG = G;
+
     printMatrix(G);
     floodFill(G, 3, {1, 1});
-    cout<<"\n";
+
+    ENDL;
+
     printMatrix(G);
+
+    ENDL;
+
+    printMatrix(GG);
+
+    ENDL;
+    
+    floodFillBFS(GG, 3, {1, 1});
+    printMatrix(GG);
+
 
     return 0;
 }
