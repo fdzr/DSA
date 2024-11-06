@@ -20,6 +20,7 @@ void DFS(Matrix &M, pair<int, int> origin, pair<int, int> dest, Matrix &visited,
     if (origin.first == dest.first && origin.second == dest.second)
     {
         minDistance = min(minDistance, cont);
+        return;
     }
 
     for (int i = 0; i < positionRows.size(); ++i)
