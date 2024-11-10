@@ -56,6 +56,32 @@ int main()
     addEdge(G, 4, 5, 3);
 
     prim(G);
+    cout<<"\n";
+
+    G.clear();
+
+    G.resize(9);
+    addEdge(G, 0, 1, 7);
+    addEdge(G, 0, 8, 15);
+
+    addEdge(G, 1, 2, 5);
+
+    addEdge(G, 2, 3, 4);
+    addEdge(G, 2, 4, 2);
+    addEdge(G, 2, 6, 3);
+
+    addEdge(G, 3, 4, 1);
+    addEdge(G, 3, 5, 9);
+
+    addEdge(G, 5, 6, 5);
+    addEdge(G, 5, 7, 12);
+
+    addEdge(G, 6, 8, 6);
+
+    addEdge(G, 7, 8, 10);
+
+    prim(G);
+
 
     return 0;
 }
