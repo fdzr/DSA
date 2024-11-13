@@ -69,25 +69,36 @@ void testBitMasks()
     cout << (x & (x - 1));
 }
 
+int find(int u, vector<int> &parent)
+{
+    if(parent[u] == -1)
+        return u;
 
+    return parent[u] = find(parent[u], parent);
+}
 
 int main()
 {
-    
-    
-    
-    
-        
-    
+    vector<int> v(10, -1);
+    v[9] = -1;
 
-    vector<int> v{1, 2};
-    auto a = move(v);
-    cout << a[0] << endl;
-    cout << a[1] << endl;
+    v[4] = 9;
+    v[5] = 9;
+    v[6] = 9;
 
-    cout << (&v == nullptr) << endl;
+    v[0] = 4;
+    v[3] = 0;
+    v[1] = 3;
+    v[2] = 3;
+    v[7] = 6;
+    v[8] = 6;
 
-    __builtin_popcount(128);
+    cout<<find(3, v)<<"\n";
+
+    for(int i = 0; i < v.size(); ++i)
+        cout<<i<<": "<<v[i]<<"\n";
+
+
 
     return 0;
 }
