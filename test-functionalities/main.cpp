@@ -71,7 +71,7 @@ void testBitMasks()
 
 int find(int u, vector<int> &parent)
 {
-    if(parent[u] == -1)
+    if (parent[u] == -1)
         return u;
 
     return parent[u] = find(parent[u], parent);
@@ -79,26 +79,30 @@ int find(int u, vector<int> &parent)
 
 int main()
 {
-    vector<int> v(10, -1);
-    v[9] = -1;
+    // vector<int> v(10, -1);
+    // v[9] = -1;
 
-    v[4] = 9;
-    v[5] = 9;
-    v[6] = 9;
+    // v[4] = 9;
+    // v[5] = 9;
+    // v[6] = 9;
 
-    v[0] = 4;
-    v[3] = 0;
-    v[1] = 3;
-    v[2] = 3;
-    v[7] = 6;
-    v[8] = 6;
+    // v[0] = 4;
+    // v[3] = 0;
+    // v[1] = 3;
+    // v[2] = 3;
+    // v[7] = 6;
+    // v[8] = 6;
 
-    cout<<find(3, v)<<"\n";
+    // cout<<find(3, v)<<"\n";
 
-    for(int i = 0; i < v.size(); ++i)
-        cout<<i<<": "<<v[i]<<"\n";
+    // for(int i = 0; i < v.size(); ++i)
+    //     cout<<i<<": "<<v[i]<<"\n";
 
-
+    set<pair<int, int>> s{{7, 2}, {1, 2}, {4, 3}};
+    for (auto elem : s)
+    {
+        cout<<elem.first<<" "<<elem.second<<"\n";
+    }
 
     return 0;
 }
