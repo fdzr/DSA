@@ -14,8 +14,6 @@ void DFS(Graph &G, vector<int> &visited, int source, int removed) {
 }
 
 void numberArticulationPoints(Graph &G) {
-    
-
     for (int i = 0; i < G.size(); ++i) {
         int connectedComponenets = 0;
         vector<int> visited(G.size(), 0);
@@ -43,7 +41,7 @@ int main() {
     Graph G(5);
     addEdge(G, 0, 1);
     addEdge(G, 0, 2);
-    
+
     addEdge(G, 1, 2);
 
     addEdge(G, 2, 3);
