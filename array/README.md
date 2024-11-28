@@ -165,3 +165,4 @@
 182. https://leetcode.com/problems/take-gifts-from-the-richest-pile/description/
 183. https://leetcode.com/problems/fair-candy-swap/description/
 184. https://leetcode.com/problems/special-array-with-x-elements-greater-than-or-equal-x/description/
+185. https://www.geeksforgeeks.org/find-the-maximum-amount-that-can-be-collected-by-selling-movie-tickets/?ref=oin_asr1
