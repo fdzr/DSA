@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
 
+// Using the idea of Tarjan's algorithm
+
 using namespace std;
 
 using Graph = vector<vector<int>>;
