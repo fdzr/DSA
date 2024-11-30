@@ -4,23 +4,23 @@ using namespace std;
 
 using Graph = vector<vector<int>>;
 
-void APUtil(Graph &G, int u, vector<int> &visited, vector<int> &disc, vector<int> &low,
-            int &time, int parent, vector<int> &isAP) {
+void APUtil(Graph &G, int u, vector<int> &visited, vector<int> &ids, vector<int> &low,
+            int &id, int parent, vector<int> &isAP) {
     int children = 0;
     visited[u] = 1;
-    disc[u] = low[u] = ++time;
+    ids[u] = low[u] = ++id;
 
     for (auto v : G[u]) {
         if (visited[v] == 0) {
             ++children;
-            APUtil(G, v, visited, disc, low, time, u, isAP);
+            APUtil(G, v, visited, ids, low, id, u, isAP);
 
             low[u] = min(low[u], low[v]);
 
-            if (parent != -1 && low[v] >= disc[u]) isAP[u] = 1;
+            if (parent != -1 && low[v] >= ids[u]) isAP[u] = 1;
 
         } else if (v != parent) {
-            low[u] = min(low[u], disc[v]);
+            low[u] = min(low[u], ids[v]);
         }
     }
 
@@ -28,15 +28,15 @@ void APUtil(Graph &G, int u, vector<int> &visited, vector<int> &disc, vector<int
 }
 
 void AP(Graph &G, int V) {
-    vector<int> desc(V, 0);
+    vector<int> ids(V, 0);
     vector<int> low(V, 0);
     vector<int> visited(V, 0);
     vector<int> isAP(V, 0);
-    int time = 0;
+    int id = 0;
     int parent = -1;
 
     for (int i = 0; i < V; ++i) {
-        if (visited[i] == 0) APUtil(G, i, visited, desc, low, time, parent, isAP);
+        if (visited[i] == 0) APUtil(G, i, visited, ids, low, id, parent, isAP);
     }
 
     for (int u = 0; u < V; ++u)
@@ -57,6 +57,19 @@ int main() {
     addEdge(G, 3, 4);
 
     AP(G, 5);
+    printf("\n");
+
+    G.clear();
+    G.resize(7);
+    addEdge(G, 0, 1);
+    addEdge(G, 1, 2);
+    addEdge(G, 2, 0);
+    addEdge(G, 1, 3);
+    addEdge(G, 1, 4);
+    addEdge(G, 1, 6);
+    addEdge(G, 3, 5);
+    addEdge(G, 4, 5);
+    AP(G, 7);
 
     return 0;
 }
