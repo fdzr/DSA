@@ -22,7 +22,7 @@ struct DS
     int find(int u)
     {
         if (parent[u] == -1)
-            return -1;
+            return u;
 
         return parent[u] = find(parent[u]);
     }
