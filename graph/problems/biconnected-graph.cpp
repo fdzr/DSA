@@ -11,8 +11,8 @@ bool DFS(Graph &G, int source, vector<int> &visited, vector<int> &desc, vector<i
     int children = 0;
 
     for (const auto &v : G[source]) {
-        ++children;
         if (visited[v] == 0) {
+            ++children;
             if (DFS(G, v, visited, desc, low, source, time)) return true;
 
             low[source] = min(low[source], low[v]);
@@ -21,13 +21,13 @@ bool DFS(Graph &G, int source, vector<int> &visited, vector<int> &desc, vector<i
                 return true;
             }
 
-            if (parent == -1 && children > 1) {
-                return true;
-            }
-
         } else if (v != parent) {
             low[source] = min(low[source], desc[v]);
         }
+    }
+
+    if (parent == -1 && children > 1) {
+        return true;
     }
 
     return false;
