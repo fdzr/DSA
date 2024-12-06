@@ -6,23 +6,23 @@ using namespace std;
 
 using Graph = vector<vector<int>>;
 
-void APUtil(Graph &G, int u, vector<int> &visited, vector<int> &ids, vector<int> &low,
+void APUtil(Graph &G, int u, vector<int> &visited, vector<int> &disc, vector<int> &low,
             int &id, int parent, vector<int> &isAP) {
     int children = 0;
     visited[u] = 1;
-    ids[u] = low[u] = ++id;
+    disc[u] = low[u] = ++id;
 
     for (auto v : G[u]) {
         if (visited[v] == 0) {
             ++children;
-            APUtil(G, v, visited, ids, low, id, u, isAP);
+            APUtil(G, v, visited, disc, low, id, u, isAP);
 
             low[u] = min(low[u], low[v]);
 
-            if (parent != -1 && low[v] >= ids[u]) isAP[u] = 1;
+            if (parent != -1 && low[v] >= disc[u]) isAP[u] = 1;
 
         } else if (v != parent) {
-            low[u] = min(low[u], ids[v]);
+            low[u] = min(low[u], disc[v]);
         }
     }
 
@@ -30,7 +30,7 @@ void APUtil(Graph &G, int u, vector<int> &visited, vector<int> &ids, vector<int>
 }
 
 void AP(Graph &G, int V) {
-    vector<int> ids(V, 0);
+    vector<int> disc(V, 0);
     vector<int> low(V, 0);
     vector<int> visited(V, 0);
     vector<int> isAP(V, 0);
@@ -38,7 +38,7 @@ void AP(Graph &G, int V) {
     int parent = -1;
 
     for (int i = 0; i < V; ++i) {
-        if (visited[i] == 0) APUtil(G, i, visited, ids, low, id, parent, isAP);
+        if (visited[i] == 0) APUtil(G, i, visited, disc, low, id, parent, isAP);
     }
 
     for (int u = 0; u < V; ++u)
