@@ -5,3 +5,5 @@ main
 .idea
 CMakeLists.txt
 cmake-build-debug
+input.txt
+**/input.txt
