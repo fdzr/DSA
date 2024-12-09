@@ -1,6 +1,17 @@
 from typing import List
 
 
+def is_valid(board: List[List], visited: List[List], row: int, col: int):
+    return (
+        row >= 0
+        and row < len(board)
+        and col >= 0
+        and col < len(board[0])
+        and visited[row][col] == 0
+        and board[row][col] == "X"
+    )
+
+
 def DFS(board: List[List], visited: List[List], row: int, col: int):
     visited[row][col] = 1
     directions = [(0, -1), (-1, 0), (0, 1), (1, 0)]
