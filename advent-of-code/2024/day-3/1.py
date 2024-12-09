@@ -25,4 +25,8 @@ def first_part():
     return sum
 
 
+def second_part():
+    pass
+
+
 print(first_part())
