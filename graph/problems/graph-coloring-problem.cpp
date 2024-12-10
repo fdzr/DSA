@@ -12,29 +12,27 @@ bool isSafe(Graph &G, vector<int> colors, int v, int color) {
     return true;
 }
 
-void graphColoringUtil(Graph &G, vector<int> &colors, int v, int index) {
+bool graphColoringUtil(Graph &G, vector<int> &colors, int v, int index) {
     if (index == G.size()) {
-        for (const auto &c : colors) cout << c << " ";
-        cout << "\n";
-
-        return;
+        return true;
     }
 
     for (int c = 1; c <= COLOR; ++c) {
         if (isSafe(G, colors, v, c)) {
             colors[v] = c;
-            graphColoringUtil(G, colors, v + 1, index + 1);
+            if (graphColoringUtil(G, colors, v + 1, index + 1) == true) return true;
+
             colors[v] = 0;
         }
     }
 
-    return;
+    return false;
 }
 
-void graphColoring(Graph &G) {
+bool graphColoring(Graph &G) {
     vector<int> colors(G.size(), 0);
 
-    graphColoringUtil(G, colors, 0, 0);
+    return graphColoringUtil(G, colors, 0, 0);
 }
 
 int main() {
@@ -45,7 +43,7 @@ int main() {
     G[3] = {0, 1, 2, 3};
     G[4] = {1, 2, 3};
 
-    graphColoring(G);
+    cout << boolalpha << graphColoring(G);
 
     return 0;
 }
