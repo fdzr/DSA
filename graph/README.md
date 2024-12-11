@@ -20,3 +20,4 @@
 20. https://leetcode.com/problems/battleships-in-a-board/description/
 21. https://leetcode.com/problems/coloring-a-border/description/
 22. https://www.geeksforgeeks.org/find-length-largest-region-boolean-matrix/
+23. https://leetcode.com/problems/shortest-distance-after-road-addition-queries-i/description/
