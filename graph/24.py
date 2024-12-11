@@ -20,7 +20,7 @@ def DFS(
     visited[row][col] = 1
     temp.append(board[row][col])
 
-    if "".join(temp) == word:
+    if index == len(word):
         return True
 
     directions = [(0, -1), (-1, -1), (-1, 0), (-1, 1), (0, 1), (1, 1), (1, 0), (1, -1)]
