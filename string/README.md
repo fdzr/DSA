@@ -107,3 +107,4 @@
 118. https://leetcode.com/problems/first-unique-character-in-a-string/description/
 119. https://leetcode.com/problems/add-strings/description/
 120. https://leetcode.com/problems/remove-digit-from-number-to-maximize-result/description/
+121. https://leetcode.com/problems/split-a-string-into-the-max-number-of-unique-substrings/description/
