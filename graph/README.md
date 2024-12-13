@@ -22,3 +22,4 @@
 22. https://www.geeksforgeeks.org/find-length-largest-region-boolean-matrix/
 23. https://leetcode.com/problems/shortest-distance-after-road-addition-queries-i/description/
 24. https://www.geeksforgeeks.org/boggle-find-possible-words-board-characters/
+25. https://www.geeksforgeeks.org/count-possible-paths-source-destination-exactly-k-edges/
