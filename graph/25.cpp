@@ -12,14 +12,14 @@ void DFS(Matrix<int> &G, vector<int> &visited, int source, int k, int time, int 
         return;
     }
 
-    visited[source] = 0;
+    visited[source] = 1;
 
     for (int v = 0; v < G[source].size(); ++v) {
         if (visited[v] == 0 && G[source][v] == 1)
             DFS(G, visited, v, k, time + 1, cont, dest);
     }
 
-    visited[source] = 1;
+    visited[source] = 0;
 }
 
 int possibleWalks(Matrix<int> &G, int k, int source, int dest) {
