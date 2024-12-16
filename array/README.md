@@ -170,3 +170,4 @@
 187. https://leetcode.com/problems/task-scheduler/description/
 188. https://www.techiedelight.com/merge-m-sorted-lists-containing-n-elements/
 189. https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/
+190. https://leetcode.com/problems/generate-parentheses/description/
