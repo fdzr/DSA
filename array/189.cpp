@@ -8,6 +8,40 @@ vector<vector<char>> phone = {{'0'},           {'0'},
                               {'m', 'n', 'o'}, {'p', 'q', 'r', 's'},
                               {'t', 'u', 'v'}, {'w', 'x', 'y', 'z'}};
 
+unordered_map<char, string> um = {{'2', "abc"}, {'3', "def"}, {'4', "ghi"},
+                                  {'5', "jkl"}, {'6', "mno"}, {'7', "pqrs"},
+                                  {'8', "tuv"}, {'9', "wxyz"}};
+
+
+void backtrack_2(int start, vector<string> &result, string &res, string digit){
+    if(digit.size() == res.size()) {
+        result.push_back(res);
+        return;
+    }
+
+    string aux = um[digit[start]];
+    for(int i = 0; i < aux.size(); ++i) {
+        res += aux[i];
+        backtrack_2(start + 1, result, res, digit);
+        res.pop_back();
+    }
+
+}
+
+vector<string> help(string digit) {
+    if(digit.size() == 0)
+        return {};
+
+    string res;
+    vector<string> result;
+
+    backtrack_2(0, result, res, digit);
+
+    return result;
+}
+
+
+
 void createCombination(int start, const vector<vector<char>> &letters,
                        vector<string> &result, string &res, int k) {
     if (k == res.size()) {
@@ -62,12 +96,13 @@ void backtrack(int start, const vector<vector<char>> &lists, string &result) {
 }
 
 int main() {
-    string digit = "23";
+    string digit = "237";
     string res;
 
     // backtrack(0, {{'a', 'b', 'c'}, {'d', 'e', 'f'}, {'g', 'h', 'i'}}, res);
 
-    auto combinations = letterCombinations(digit);
+    // auto combinations = letterCombinations(digit);
+    auto combinations = help(digit);
 
     for (const auto &elem : combinations) cout << elem << "\n";
 
