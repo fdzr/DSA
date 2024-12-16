@@ -20,7 +20,7 @@ void createCombination(int start, const vector<vector<char>> &letters,
             if (res == "" && i != 0) continue;
 
             res.push_back(letters[i][j]);
-            createCombination(i + 1, letters, result, res, k);
+            createCombination(start + 1, letters, result, res, k);
             res.pop_back();
         }
     }
@@ -62,7 +62,7 @@ void backtrack(int start, const vector<vector<char>> &lists, string &result) {
 }
 
 int main() {
-    string digit = "9";
+    string digit = "23";
     string res;
 
     // backtrack(0, {{'a', 'b', 'c'}, {'d', 'e', 'f'}, {'g', 'h', 'i'}}, res);
