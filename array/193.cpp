@@ -16,7 +16,7 @@ struct Item {
     bool operator>(const Item& other) const {
         if (freq == other.freq) return index <= other.index;
 
-        return freq > other.freq;
+        return freq < other.freq;
     }
 
     bool operator<(const Item& other) const {

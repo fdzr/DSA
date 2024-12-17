@@ -119,12 +119,17 @@ void backtrack_2(vector<int> nums, vector<int> &solution, int &cont) {
     //     cout<<elem.first<<" "<<elem.second<<"\n";
     // }
 
-    vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8};
-    // backtrack(0, 8, arr);
-    vector<int> solution;
-    int cont = 0;
-    backtrack_2(arr, solution, cont);
-    printf("%d", cont);
+    // vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8};
+    // // backtrack(0, 8, arr);
+    // vector<int> solution;
+    // int cont = 0;
+    // backtrack_2(arr, solution, cont);
+    // printf("%d", cont);
+
+    unordered_map<int, int> um = {{3,1}};
+
+    auto it = um.find(3);
+    cout<<it->first;
 
     return 0;
 }
