@@ -77,15 +77,15 @@ void backtrack(int start, int end, vector<int> arr) {
 }
 
 void backtrack_2(vector<int> nums, vector<int> &solution, int &cont) {
-    if(solution.size() == nums.size()) {
+    if (solution.size() == nums.size()) {
         // for(int e: solution)
         //     cout<< e << " ";
         // cout<<"\n";
         ++cont;
     }
 
-    for(int i = 0; i < nums.size(); ++i) {
-        if(find(solution.begin(), solution.end(), nums[i]) == solution.end()) {
+    for (int i = 0; i < nums.size(); ++i) {
+        if (find(solution.begin(), solution.end(), nums[i]) == solution.end()) {
             solution.push_back(nums[i]);
             backtrack_2(nums, solution, cont);
             solution.pop_back();
@@ -93,7 +93,26 @@ void backtrack_2(vector<int> nums, vector<int> &solution, int &cont) {
     }
 }
 
-    int main() {
+class Item {
+   public:
+    int a, b, c;
+    Item(int _a, int _b, int _c) {
+        a = _a;
+        b = _b;
+        c = _c;
+    }
+    bool operator<(const Item &other) const {
+        if (a == other.a) {
+            if (b == other.b) {
+                return c < other.c;
+            } else
+                return b < other.b;
+        }
+        return a < other.a;
+    }
+};
+
+int main() {
     // vector<int> v(10, -1);
     // v[9] = -1;
 
@@ -126,10 +145,38 @@ void backtrack_2(vector<int> nums, vector<int> &solution, int &cont) {
     // backtrack_2(arr, solution, cont);
     // printf("%d", cont);
 
-    unordered_map<int, int> um = {{3,1}};
+    // unordered_map<int, int> um = {{3,1}};
 
-    auto it = um.find(3);
-    cout<<it->first;
+    // auto it = um.find(3);
+    // cout<<it->first;
+
+    priority_queue<Item, vector<Item>, less<Item>> pq;
+    pq.push(Item(3, 2, 1));
+    pq.push(Item(3, 4, 1));
+    pq.push(Item(2, 4, 1));
+
+    while (!pq.empty()) {
+        Item item = pq.top();
+        pq.pop();
+        cout << item.a << " " << item.b << " " << item.c << "\n";
+    }
+
+    // vector<Item> v;
+    // v.push_back(Item(3, 2, 1));
+    // v.push_back(Item(3, 4, 1));
+    // v.push_back(Item(2, 4, 1));
+
+    // sort(v.begin(), v.end());
+
+    // for (const auto &item : v) {
+    //     cout << item.a << " " << item.b << " " << item.c << "\n";
+    // }
+
+    // vector<int> a = {1,5,4,3,6};
+    // sort(a.begin(), a.end(), greater<int>());
+
+    // for(const auto& e: a)
+    //     cout<<e<<" ";
 
     return 0;
 }
