@@ -23,3 +23,4 @@
 23. https://leetcode.com/problems/shortest-distance-after-road-addition-queries-i/description/
 24. https://www.geeksforgeeks.org/boggle-find-possible-words-board-characters/
 25. https://www.geeksforgeeks.org/count-possible-paths-source-destination-exactly-k-edges/
+26. https://leetcode.com/problems/course-schedule/description/
