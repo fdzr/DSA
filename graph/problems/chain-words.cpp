@@ -7,17 +7,12 @@ using vi = vector<int>;
 using SCC = Graph;
 
 pair<Graph, vi> createGraph(const vector<string> &words) {
-    Graph g(words.size());
-    vector<int> inDegree(words.size(), 0);
+    Graph g(26);
+    vector<int> inDegree(26, 0);
     for (int i = 0; i < words.size(); ++i) {
-        for (int j = 0; j < words.size(); ++j) {
-            if (i == j) continue;
-
-            if (words[i].at(words[i].size() - 1) == words[j].at(0)) {
-                g[i].push_back(j);
-                inDegree[j]++;
-            }
-        }
+        string str = words[i];
+        g[str[0] - 'a'].push_back(str[str.size() - 1] - 'a');
+        inDegree[str[str.size() - 1] - 'a']++;
     }
 
     return {g, inDegree};
@@ -65,7 +60,18 @@ bool isStronglyConnected(Graph &G) {
     SCC scc;
     int time = 0;
 
-    DFS(G, visited, 0, low, desc, redStack, st, scc, time);
+    int v;
+    for (v = 0; v < G.size(); ++v) {
+        if (G[v].size() > 0) break;
+    }
+
+    if (v == G.size()) return false;
+
+    DFS(G, visited, v, low, desc, redStack, st, scc, time);
+
+    for (int i = 0; i < visited.size(); ++i) {
+        if (G[i].size() > 0 && visited[i] == 0) return false;
+    }
 
     return scc.size() == 1;
 }
@@ -84,9 +90,21 @@ bool isEulerian(const vector<string> &words) {
 
 int main() {
     vector<string> words = {"for", "geek", "rig", "kaf"};
-    createGraph(words);
 
-    cout << boolalpha << isEulerian(words);
+    cout << boolalpha << isEulerian(words) << "\n";
+
+    words = {"aab", "bac", "aaa", "cda"};
+    bool answer = isEulerian(words);
+
+    cout << boolalpha << answer << "\n";
+
+    words = {"ijk", "kji", "abc", "cba"};
+    answer = isEulerian(words);
+
+    cout << boolalpha << answer << "\n";
+
+    words = {"aaa", "bbb"};
+    cout<< boolalpha << isEulerian(words)<<"\n";
 
     return 0;
 }
