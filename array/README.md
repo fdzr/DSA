@@ -174,4 +174,4 @@
 191. https://www.techiedelight.com/sort-k-sorted-array/
 192. https://www.geeksforgeeks.org/word-ladder-length-of-shortest-chain-to-reach-a-target-word/
 193. https://www.techiedelight.com/sort-elements-by-their-frequency-and-index/
-194. google=split-array-into-k-subsets-of-n-sums
+194. https://www.youtube.com/watch?v=qpgqhp_9d1s
