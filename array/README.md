@@ -175,3 +175,4 @@
 192. https://www.geeksforgeeks.org/word-ladder-length-of-shortest-chain-to-reach-a-target-word/
 193. https://www.techiedelight.com/sort-elements-by-their-frequency-and-index/
 194. https://www.youtube.com/watch?v=qpgqhp_9d1s
+195. https://www.techiedelight.com/find-length-longest-path-matrix-consecutive-characters/
