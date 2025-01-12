@@ -41,6 +41,38 @@ bool search(TrieNode* root, const string_view& key) {
     return curr->wordEnd;
 }
 
+bool isEmpty(TrieNode* root) {
+    for (const auto& item : root->child)
+        if (root != nullptr) return false;
+
+    return true;
+}
+
+TrieNode* remove(TrieNode* root, string key, int depth = 0) {
+    if (!root) return nullptr;
+
+    if (depth == key.size()) {
+        if (root->wordEnd) root->wordEnd = false;
+
+        if (isEmpty(root)) {
+            delete root;
+            root = nullptr;
+        }
+
+        return root;
+    }
+
+    int index = key[depth] - 'a';
+    root->child[index] = remove(root->child[index], key, depth + 1);
+
+    if (isEmpty(root) && root->wordEnd == false) {
+        delete root;
+        root = nullptr;
+    }
+
+    return root;
+}
+
 int main() {
     vector<string> keys = {"and", "ant", "do", "geek", "dad", "ball"};
     TrieNode* root = new TrieNode();
@@ -51,13 +83,30 @@ int main() {
 
     vector<string> searchKeys = {"do", "gee", "bat"};
 
-    for(const auto &sk: searchKeys) {
+    for (const auto& sk : searchKeys) {
         if (search(root, sk)) {
-            cout<<sk<<" is in te trie"<<"\n";
+            cout << sk << " is in the trie" << "\n";
         } else {
-            cout<<sk << " is not in the trie"<<"\n";
+            cout << sk << " is not in the trie" << "\n";
         }
     }
+
+    cout << "\n";
+    delete root;
+    root = new TrieNode();
+
+    keys = {"the", "a",   "there", "answer", "any",
+            "by",  "bye", "their", "hero",   "heroplane"};
+
+    // Construct trie
+    for (int i = 0; i < keys.size(); i++) insertKey(root, keys[i]);
+
+    // Search for different keys
+    search(root, "the") ? cout << "Yes\n" : cout << "No\n";
+    search(root, "these") ? cout << "Yes\n" : cout << "No\n";
+
+    remove(root, "heroplane");
+    search(root, "hero") ? cout << "Yes\n" : cout << "No\n";
 
     return 0;
 }
