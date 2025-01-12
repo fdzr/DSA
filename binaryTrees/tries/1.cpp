@@ -43,7 +43,7 @@ bool search(TrieNode* root, const string_view& key) {
 
 bool isEmpty(TrieNode* root) {
     for (const auto& item : root->child)
-        if (root != nullptr) return false;
+        if (item != nullptr) return false;
 
     return true;
 }
@@ -98,10 +98,8 @@ int main() {
     keys = {"the", "a",   "there", "answer", "any",
             "by",  "bye", "their", "hero",   "heroplane"};
 
-    // Construct trie
     for (int i = 0; i < keys.size(); i++) insertKey(root, keys[i]);
 
-    // Search for different keys
     search(root, "the") ? cout << "Yes\n" : cout << "No\n";
     search(root, "these") ? cout << "Yes\n" : cout << "No\n";
 
