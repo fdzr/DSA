@@ -42,11 +42,21 @@ bool search(TrieNode* root, const string_view& key) {
 }
 
 int main() {
-    vector<string> keys = {"and", "ant", "go", "geek", "dad", "ball"};
+    vector<string> keys = {"and", "ant", "do", "geek", "dad", "ball"};
     TrieNode* root = new TrieNode();
 
     for (const string& s : keys) {
         insertKey(root, s);
+    }
+
+    vector<string> searchKeys = {"do", "gee", "bat"};
+
+    for(const auto &sk: searchKeys) {
+        if (search(root, sk)) {
+            cout<<sk<<" is in te trie"<<"\n";
+        } else {
+            cout<<sk << " is not in the trie"<<"\n";
+        }
     }
 
     return 0;
