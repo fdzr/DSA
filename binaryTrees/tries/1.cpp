@@ -21,21 +21,33 @@ void insertKey(TrieNode* root, const string_view& key) {
     for (const auto& ch : key) {
         if (curr->child[ch - 'a'] == nullptr) {
             curr->child[ch - 'a'] = new TrieNode();
-            curr = curr->child[ch - 'a'];
-        } else {
-            curr = curr->child[ch - 'a'];
         }
+        curr = curr->child[ch - 'a'];
     }
 
     curr->wordEnd = true;
-
 }
 
-int main() { 
-    string_view key = "and";
-    TrieNode *root = new TrieNode();
+bool search(TrieNode* root, const string_view& key) {
+    TrieNode* curr = root;
+    if (curr == nullptr) return false;
 
-    insertKey(root, key);
+    for (const auto& ch : key) {
+        if (curr->child[ch - 'a'] == nullptr) return false;
 
-    return 0; 
+        curr = curr->child[ch - 'a'];
+    }
+
+    return curr->wordEnd;
+}
+
+int main() {
+    vector<string> keys = {"and", "ant", "go", "geek", "dad", "ball"};
+    TrieNode* root = new TrieNode();
+
+    for (const string& s : keys) {
+        insertKey(root, s);
+    }
+
+    return 0;
 }
