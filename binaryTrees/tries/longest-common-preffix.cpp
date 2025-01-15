@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
 
+// https://www.techiedelight.com/longest-common-prefix-given-set-strings-using-trie/
+
 #include "trie.hpp"
 
 using namespace std;
