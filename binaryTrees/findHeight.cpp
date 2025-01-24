@@ -1,10 +1,11 @@
 #include <iostream>
-#include "tree.h"
+#include "../common/tree.h"
 
 using namespace std;
+using namespace Tree;
 
 
-int maxDepth(Node* root){
+int maxDepth(TreeNode* root){
     if(!root)
         return 0;
 
@@ -19,13 +20,13 @@ int maxDepth(Node* root){
 
 
 int main(){
-    Node* root = createNode(1);
+    TreeNode* root = createNode(1);
     root->left = createNode(2);
     root->right = createNode(3);
     root->left->left = createNode(4);
     root->left->right = createNode(5);
 
-    cout << "Height of tree is " << maxDepth(root);
+    cout << "Height of tree is " << maxDepth(root) - 1;
 
     return 0;
 }
