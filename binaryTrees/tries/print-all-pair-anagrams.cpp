@@ -37,29 +37,17 @@ void insertKey(Trie *root, const string &key) {
     curr->words.push_back(key);
 }
 
-vector<pair<string, string>> generatePairs(const vector<string> &words) {
-    vector<pair<string, string>> ans;
-
-    for (int i = 0; i < words.size() - 1; ++i) {
-        for (int j = i + 1; j < words.size(); ++j) {
-            ans.push_back({words[i], words[j]});
-        }
-    }
-
-    return ans;
-}
-
-void preOrder(Trie *root, vector<pair<string, string>> &ans) {
+void preOrder(Trie *root) {
     if (root == nullptr) return;
 
     if (root->isLeaf && root->words.size() > 1) {
-        auto allPairs = generatePairs(root->words);
-        copy(allPairs.begin(), allPairs.end(), back_inserter(ans));
+        copy(root->words.begin(), root->words.end(), ostream_iterator<string>(cout, " "));
+        cout<<"\n";
     }
 
     for (int i = 0; i < ALPHABET; ++i) {
         if (root->child[i] != nullptr) {
-            preOrder(root->child[i], ans);
+            preOrder(root->child[i]);
         }
     }
 }
@@ -71,13 +59,10 @@ void printPairs(const vector<pair<string, string>> &ans) {
     }
 }
 
-void createAnagrams(Trie *root, const vector<string> &dict) {
+void groupAnagrams(Trie *root, const vector<string> &dict) {
     for (const auto &word : dict) insertKey(root, word);
 
-    vector<pair<string, string>> ans;
-
-    preOrder(root, ans);
-    printPairs(ans);
+    preOrder(root);
 }
 
 int main() {
@@ -85,7 +70,7 @@ int main() {
     vector<string> words = {"auctioned", "actors",  "altered", "streaming", "related",
                             "education", "aspired", "costar",  "despair",   "mastering"};
 
-    createAnagrams(root, words);
+    groupAnagrams(root, words);
 
     return 0;
 }
