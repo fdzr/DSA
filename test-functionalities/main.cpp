@@ -112,6 +112,14 @@ class Item {
     }
 };
 
+class Compare {
+   public:
+    bool operator()(const pair<string, int> &a, const pair<string, int> &b) {
+        if (a.second == b.second) return a.first > b.first;
+        return a.second < b.second;
+    }
+};
+
 int main() {
     // vector<int> v(10, -1);
     // v[9] = -1;
@@ -150,16 +158,16 @@ int main() {
     // auto it = um.find(3);
     // cout<<it->first;
 
-    priority_queue<Item, vector<Item>, less<Item>> pq;
-    pq.push(Item(3, 2, 1));
-    pq.push(Item(3, 4, 1));
-    pq.push(Item(2, 4, 1));
+    // priority_queue<Item, vector<Item>, less<Item>> pq;
+    // pq.push(Item(3, 2, 1));
+    // pq.push(Item(3, 4, 1));
+    // pq.push(Item(2, 4, 1));
 
-    while (!pq.empty()) {
-        Item item = pq.top();
-        pq.pop();
-        cout << item.a << " " << item.b << " " << item.c << "\n";
-    }
+    // while (!pq.empty()) {
+    //     Item item = pq.top();
+    //     pq.pop();
+    //     cout << item.a << " " << item.b << " " << item.c << "\n";
+    // }
 
     // vector<Item> v;
     // v.push_back(Item(3, 2, 1));
@@ -177,6 +185,38 @@ int main() {
 
     // for(const auto& e: a)
     //     cout<<e<<" ";
+
+    // unordered_map<string, int> um;
+    // string words[] = {"code",         "coder", "coding",   "codable",      "codec",
+    //                   "codecs",       "coded", "codeless", "codec",        "codecs",
+    //                   "codependence", "codex", "codify",   "codependents", "codes",
+    //                   "code",         "coder", "codesign", "codec",        "codeveloper",
+    //                   "codrive",      "codec", "codecs",   "codiscovered"};
+
+    // for (const string &word : words) {
+    //     um[word]++;
+    // }
+
+    // priority_queue<pair<string, int>, vector<pair<string, int>>, Compare> pq;
+    // for (const auto &entry : um) {
+    //     pq.push(entry);
+    // }
+
+    // while (pq.size() > 0) {
+    //     auto item = pq.top();
+    //     cout << item.first << " " << item.second << "\n";
+    //     pq.pop();
+    // }
+
+    priority_queue<int> pq;
+    for(int i = 1; i <= 10; ++i)
+        pq.push(i);
+
+    while(pq.size() > 1) {
+        int e = pq.top();
+        cout<< e << "\n";
+        pq.pop();
+    }
 
     return 0;
 }
