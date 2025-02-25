@@ -21,6 +21,16 @@ def find_node(root: Node, key: int):
     return False
 
 
+def find_node2(root: Node, key: int):
+    if root is None:
+        return False
+
+    if root.key == key:
+        return True  # Early return, no further recursion
+
+    return find_node2(root.left, key) or find_node2(root.right, key)
+
+
 if __name__ == "__main__":
     root = Node(0)
     root.left = Node(1)
@@ -36,4 +46,4 @@ if __name__ == "__main__":
     root.right.left = Node(5)
     root.right.right = Node(6)
 
-    print(find_node(root, 9))
+    print(find_node2(root, 5))
