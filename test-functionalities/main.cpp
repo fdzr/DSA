@@ -190,7 +190,7 @@ int main() {
     // string words[] = {"code",         "coder", "coding",   "codable",      "codec",
     //                   "codecs",       "coded", "codeless", "codec",        "codecs",
     //                   "codependence", "codex", "codify",   "codependents", "codes",
-    //                   "code",         "coder", "codesign", "codec",        "codeveloper",
+    //                   "code",         "coder", "codesign", "codec", "codeveloper",
     //                   "codrive",      "codec", "codecs",   "codiscovered"};
 
     // for (const string &word : words) {
@@ -208,15 +208,17 @@ int main() {
     //     pq.pop();
     // }
 
-    priority_queue<int> pq;
-    for(int i = 1; i <= 10; ++i)
-        pq.push(i);
+    // priority_queue<int> pq;
+    // for(int i = 1; i <= 10; ++i)
+    //     pq.push(i);
 
-    while(pq.size() > 1) {
-        int e = pq.top();
-        cout<< e << "\n";
-        pq.pop();
-    }
+    // while(pq.size() > 1) {
+    //     int e = pq.top();
+    //     cout<< e << "\n";
+    //     pq.pop();
+    // }
+
+    constexpr int a = 11;
 
     return 0;
 }
