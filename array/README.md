@@ -176,3 +176,4 @@
 193. https://www.techiedelight.com/sort-elements-by-their-frequency-and-index/
 194. https://www.youtube.com/watch?v=qpgqhp_9d1s
 195. https://www.techiedelight.com/find-length-longest-path-matrix-consecutive-characters/
+196. https://leetcode.com/problems/apply-operations-to-an-array/description/
