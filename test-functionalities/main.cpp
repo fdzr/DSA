@@ -196,7 +196,7 @@ int main() {
     // string words[] = {"code",         "coder", "coding",   "codable",      "codec",
     //                   "codecs",       "coded", "codeless", "codec",        "codecs",
     //                   "codependence", "codex", "codify",   "codependents", "codes",
-    //                   "code",         "coder", "codesign", "codec", "codeveloper",
+    //                   "code",         sdsd"coder", "codesign", "codec", "codeveloper",
     //                   "codrive",      "codec", "codecs",   "codiscovered"};
 
     // for (const string &word : words) {
@@ -224,18 +224,9 @@ int main() {
     //     pq.pop();
     // }
 
-    constexpr int a = 11;
-
-    Item *item = new Item(1,2,3);
-    cout<<item->a<<"\n";
-    cout<<item->b<<"\n";
-    cout<<item->c<<"\n";
-
-    setItem(item);
-
-    cout<<item->a<<"\n";
-    cout<<item->b<<"\n";
-    cout<<item->c<<"\n";
+    
+    unique_ptr<Item> item = make_unique<Item>(1,2,3);
+    cout<< item->a;
 
 
     return 0;
