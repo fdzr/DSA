@@ -120,6 +120,12 @@ class Compare {
     }
 };
 
+void setItem(Item *item) {
+    item->a = 10;
+    item->b = 11;
+    item->c = 12;
+}
+
 int main() {
     // vector<int> v(10, -1);
     // v[9] = -1;
@@ -219,6 +225,18 @@ int main() {
     // }
 
     constexpr int a = 11;
+
+    Item *item = new Item(1,2,3);
+    cout<<item->a<<"\n";
+    cout<<item->b<<"\n";
+    cout<<item->c<<"\n";
+
+    setItem(item);
+
+    cout<<item->a<<"\n";
+    cout<<item->b<<"\n";
+    cout<<item->c<<"\n";
+
 
     return 0;
 }
