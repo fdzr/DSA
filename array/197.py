@@ -21,7 +21,11 @@ def moveZeroes(nums: List[int]) -> None:
             R += 1
 
 
+def moveZeroes2(nums: List[int]):
+    nums.sort(key=lambda x: x == 0)
+
+
 nums = [0, 1, 0, 3, 12]
-moveZeroes(nums)
+moveZeroes2(nums)
 
 print(nums)

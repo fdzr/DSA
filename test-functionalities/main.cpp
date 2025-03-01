@@ -126,6 +126,25 @@ void setItem(Item *item) {
     item->c = 12;
 }
 
+class Test {
+    int a;
+
+   public:
+    int getA() const { return a; }
+    void setA(int v) { a = v; }
+    Test(int _a) : a{_a} {}
+    Test() : a{0} {}
+    Test(const Test &other) {
+        cout << "calling the copy constructor ..." << "\n";
+        a = other.a;
+    }
+    Test &operator=(const Test &other) {
+        cout << "calling the assignation operator ..." << "\n";\
+        this->setA(other.getA());
+        return *this;
+    }
+};
+
 int main() {
     // vector<int> v(10, -1);
     // v[9] = -1;
@@ -224,10 +243,25 @@ int main() {
     //     pq.pop();
     // }
 
-    
-    unique_ptr<Item> item = make_unique<Item>(1,2,3);
-    cout<< item->a;
+    // unique_ptr<Item> item = make_unique<Item>(1, 2, 3);
+    // cout << item->a;
 
+    // Test b(1);
+    // Test a = b;
+    // Test c, d(4);
+    // c = d;
+    // c.setA(15);
+    // cout<<c.getA()<<"\n";
+    // cout<<d.getA()<<"\n";
+    // d.setA(25);
+    // cout<<c.getA()<<"\n";
+    // cout<<d.getA()<<"\n";
+
+    string a = "test";
+    string b = "tes";
+    bool r = (a <=> b) == 0;
+
+    cout<< r;
 
     return 0;
 }
