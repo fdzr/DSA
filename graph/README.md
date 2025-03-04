@@ -29,3 +29,4 @@
 29. https://leetcode.com/problems/cheapest-flights-within-k-stops/description/?envType=problem-list-v2&envId=graph
 30. https://www.techiedelight.com/generate-list-of-possible-words-from-a-character-matrix/
 31. https://leetcode.com/problems/network-delay-time/description/?envType=problem-list-v2&envId=graph
+32. https://leetcode.com/problems/maximum-number-of-fish-in-a-grid/description/
