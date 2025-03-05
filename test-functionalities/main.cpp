@@ -281,15 +281,24 @@ int main() {
     
 
     // cout<< same_as<vector<int>::value_type, int>;
-    vector<string::iterator> res;
-    string t = "test asdf";
-    for(string::iterator p = t.begin(); p != t.end(); ++p) {
-        res.push_back(p);
-    }
+    // vector<string::iterator> res;
+    // string t = "test asdf";
+    // for(string::iterator p = t.begin(); p != t.end(); ++p) {
+    //     res.push_back(p);
+    // }
 
-    for(auto ch: res)
-        cout<< *ch<<"\n";
+    // for(auto ch: res)
+    //     cout<< *ch<<"\n";
 
+
+    // for(int x: ranges::iota_view(42, 52)) {
+    //     cout<< x << " ";
+    // }
+
+    vector<int> v(5);
+    iota(v.begin(), v.end(), 1);
+
+    for(int e: v) cout<< e<< " ";
 
     return 0;
 }
