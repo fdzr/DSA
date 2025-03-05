@@ -30,9 +30,7 @@ from typing import List
 
 
 def reverseList(a: List[int]):
-    b = [e for e in a if e % 2 == 0]
-    b.reverse()
-    return b
+    return list(reversed([e for e in a if e % 2 == 0]))
 
 
 print(reverseList([1, 2, 3, 4]))
