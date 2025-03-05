@@ -145,6 +145,19 @@ class Test {
     }
 };
 
+template<typename T>
+concept Addable = requires(T a, T b) {
+    { a + b } -> convertible_to<T>;
+};
+
+template<typename T>
+// requires Addable<T>
+T add(T a, T b){
+    static_assert(Addable<T>, "Type must support addition");
+    return a + b;
+}
+
+
 int main() {
     // vector<int> v(10, -1);
     // v[9] = -1;
@@ -257,11 +270,26 @@ int main() {
     // cout<<c.getA()<<"\n";
     // cout<<d.getA()<<"\n";
 
-    string a = "test";
-    string b = "tes";
-    bool r = (a <=> b) == 0;
+    // string a = "test";
+    // string b = "tes";
+    // bool r = (a <=> b) == 0;
 
-    cout<< r;
+    // cout<< r;
+
+    // cout << add<string>("frank", " zamora");
+
+    
+
+    // cout<< same_as<vector<int>::value_type, int>;
+    vector<string::iterator> res;
+    string t = "test asdf";
+    for(string::iterator p = t.begin(); p != t.end(); ++p) {
+        res.push_back(p);
+    }
+
+    for(auto ch: res)
+        cout<< *ch<<"\n";
+
 
     return 0;
 }
