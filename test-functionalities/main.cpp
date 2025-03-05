@@ -295,10 +295,23 @@ int main() {
     //     cout<< x << " ";
     // }
 
-    vector<int> v(5);
-    iota(v.begin(), v.end(), 1);
+    // vector<int> v(5);
+    // iota(v.begin(), v.end(), 1);
 
-    for(int e: v) cout<< e<< " ";
+    // for(int e: v) cout<< e<< " ";
+
+    // tuple<int, string, int> t = make_tuple(12, "frank"s, 15);
+    // decltype(get<1>(t)) name = get<1>(t);
+    // printf("%s", name.c_str());
+
+    // optional<int> a;
+    // a = 11;
+    // cout<<a.has_value();
+
+    auto t0 = chrono::system_clock::now();
+    this_thread::sleep_for(1s);
+    auto t1 = chrono::system_clock::now();
+    cout<<duration_cast<chrono::seconds>(t1 -t0);
 
     return 0;
 }
