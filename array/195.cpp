@@ -37,8 +37,6 @@ void maxPath(const board<char> &boogle, board<int> &visited, int row, int col, i
             visited[newRow][newCol] = 0;
         }
     }
-
-    
 }
 
 int main() {
@@ -54,7 +52,7 @@ int main() {
 
     maxPath(boogle, visited, 2, 2, cont, maxCont, previousChar);
 
-    cout<<maxCont;
+    cout << maxCont;
 
     return 0;
 }
