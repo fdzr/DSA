@@ -17,6 +17,15 @@ def pre_order(root: Node):
     pre_order(root.right)
 
 
+def in_order(root: Node):
+    if root is None:
+        return None
+
+    in_order(root.left)
+    print(root.key, end=" ")
+    in_order(root.right)
+
+
 def build_tree(
     preorder: List[int],
     start: int,
@@ -25,9 +34,12 @@ def build_tree(
     if start > end:
         return None
 
-    mid = (start - end) // 2 + end
-
     root = Node(preorder[start])
+
+    if start == end:
+        return root
+
+    mid = (1 + start - end) // 2 + end
 
     root.left = build_tree(preorder, start + 1, mid)
     root.right = build_tree(preorder, mid + 1, end)
@@ -36,11 +48,14 @@ def build_tree(
 
 
 def solution():
-    preorder = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+    preorder = [1, 2, 4, 5, 3, 6, 7]
     start, end = 0, len(preorder) - 1
 
     return build_tree(preorder, start, end)
 
 
 if __name__ == "__main__":
-    pre_order(solution())
+    root = solution()
+    in_order(root)
+    print()
+    pre_order(root)
