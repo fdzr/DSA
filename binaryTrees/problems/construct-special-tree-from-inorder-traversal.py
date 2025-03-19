@@ -31,7 +31,7 @@ def help_max(inorder: List[int], start: int, end: int):
 
 def build_tree(inorder, start, end):
     if start > end:
-        return root
+        return None
 
     max_index = help_max(inorder, start, end)
 
@@ -48,7 +48,8 @@ def build_tree(inorder, start, end):
 
 def solution():
     inorder = [5, 10, 40, 30, 28]
-    in_order(build_tree(inorder, 0, len(inorder) - 1))
+    root = build_tree(inorder, 0, len(inorder) - 1)
+    in_order(root)
 
 
 if __name__ == "__main__":
