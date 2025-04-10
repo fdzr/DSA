@@ -30,3 +30,4 @@
 30. https://www.techiedelight.com/generate-list-of-possible-words-from-a-character-matrix/
 31. https://leetcode.com/problems/network-delay-time/description/?envType=problem-list-v2&envId=graph
 32. https://leetcode.com/problems/maximum-number-of-fish-in-a-grid/description/
+34. https://www.techiedelight.com/total-paths-in-digraph-from-source-to-destination-m-edges/
