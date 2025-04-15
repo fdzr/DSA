@@ -63,7 +63,7 @@ void deleteNodeBST(TreeNode *root, int key) {
                         temp->left = curr->left;
                         delete curr;
                     } else {
-                        temp->left = curr->left;
+                        temp->right = curr->left;
                         delete curr;
                     }
 
