@@ -73,17 +73,16 @@ void deleteNodeBST(TreeNode *root, int key) {
                     TreeNode *succesor = findInorderSuccesor(curr->right);
                     TreeNode *parent = findParent(root, succesor);
 
-                    if (parent->left->val == succesor->val) {
-                        parent->left = nullptr;
-
-                    } else
-                        parent->right = nullptr;
-
                     if (temp->left->val == curr->val) {
-                        temp->left->val = succesor->val;
+                        temp->left = succesor;
+                        succesor->right = curr->right;
+
                     } else {
-                        temp->right->val = succesor->val;
+                        temp->right = succesor;
+                        succesor->left = curr->left;
                     }
+
+                    delete curr;
 
                     return;
                 }
@@ -100,25 +99,33 @@ void deleteNodeBST(TreeNode *root, int key) {
 }
 
 int main() {
+    // TreeNode *root = createNode(50);
+    // root->left = createNode(30);
+    // root->right = createNode(70);
+
+    // root->left->left = createNode(20);
+    // root->left->right = createNode(40);
+
+    // root->right->left = createNode(60);
+    // root->right->right = createNode(80);
+
+    // root->right->left->left = createNode(58);
+    // root->right->left->right = createNode(63);
+
+    // root->right->right->left = createNode(75);
+    // root->right->right->right = createNode(82);
+
     TreeNode *root = createNode(50);
     root->left = createNode(30);
     root->right = createNode(70);
 
-    root->left->left = createNode(20);
-    root->left->right = createNode(40);
-
     root->right->left = createNode(60);
     root->right->right = createNode(80);
 
-    root->right->left->left = createNode(58);
-    root->right->left->right = createNode(63);
-
-    root->right->right->left = createNode(75);
-    root->right->right->right = createNode(82);
+    root->right->right->right = createNode(81);
+    // root->right->right->left->right = createNode(82);
 
     inOrder(root);
-
-    // preOrder(root);
     cout << "\n";
     deleteNodeBST(root, 70);
     cout << "\n";
