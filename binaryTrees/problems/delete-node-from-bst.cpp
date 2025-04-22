@@ -31,83 +31,67 @@ TreeNode *findParent(TreeNode *root, TreeNode *node) {
 }
 
 void deleteNodeBST(TreeNode *root, int key) {
-    TreeNode *curr = root, *temp = nullptr;
+    TreeNode *curr = root, *parent = nullptr;
 
-    while (curr != nullptr) {
-        if (curr->val == key) {
-            if (isLeaf(curr)) {
-                if (temp->left->val == key) {
-                    delete curr;
-                    temp->left = nullptr;
-                } else {
-                    delete curr;
-                    temp->right = nullptr;
-                }
+    while (curr != nullptr && curr->val != key) {
+        parent = curr;
 
-                return;
-
-            } else {
-                if (curr->left == nullptr && curr->right != nullptr) {
-                    if (temp->left->val == key) {
-                        temp->left = curr->right;
-                        delete curr;
-                    } else {
-                        temp->right = curr->right;
-                        delete curr;
-                    }
-
-                    return;
-
-                } else if (curr->left != nullptr && curr->right == nullptr) {
-                    if (temp->left->val == key) {
-                        temp->left = curr->left;
-                        delete curr;
-                    } else {
-                        temp->right = curr->left;
-                        delete curr;
-                    }
-
-                    return;
-
-                } else {
-                    TreeNode *succesor = findInorderSuccesor(curr->right);
-                    TreeNode *parent = findParent(root, succesor);
-
-                    if (temp->left->val == curr->val) {
-                        temp->left = succesor;
-                        succesor->right = curr->right;
-
-                    } else {
-                        temp->right = succesor;
-                        succesor->left = curr->left;
-                    }
-
-                    delete curr;
-
-                    return;
-                }
-            }
-        }
-
-        temp = curr;
-
-        if (curr->val > key)
+        if (curr->val > key) {
             curr = curr->left;
-        else
+        } else
             curr = curr->right;
+    }
+
+    if (curr == nullptr) return;
+
+    auto replaceChild = [&](TreeNode *child) {
+        if (!parent) return;
+
+        if (parent->left == curr)
+            parent->left = child;
+        else
+            parent->right = child;
+    };
+
+    if (isLeaf(curr)) {
+        replaceChild(nullptr);
+        delete curr;
+    }
+
+    else if (!curr->left || !curr->right) {
+        TreeNode *child = curr->left ? curr->left : curr->right;
+        replaceChild(child);
+        delete curr;
+    }
+
+    else {
+        TreeNode *inorderSuccesor = findInorderSuccesor(curr->right);
+        TreeNode *succesorParent = findParent(root, inorderSuccesor);
+
+        curr->val = inorderSuccesor->val;
+
+        if (succesorParent->left == inorderSuccesor)
+            succesorParent->left = inorderSuccesor->right;
+        else
+            succesorParent->right = inorderSuccesor->right;
+
+        delete inorderSuccesor;
     }
 }
 
 int main() {
-    // TreeNode *root = createNode(50);
-    // root->left = createNode(30);
-    // root->right = createNode(70);
+    TreeNode *root = createNode(50);
+    root->left = createNode(30);
+    root->right = createNode(70);
 
     // root->left->left = createNode(20);
     // root->left->right = createNode(40);
 
-    // root->right->left = createNode(60);
-    // root->right->right = createNode(80);
+    root->right->left = createNode(60);
+    root->right->right = createNode(80);
+
+    root->right->right->left = createNode(75);
+    root->right->right->left->right = createNode(76);
 
     // root->right->left->left = createNode(58);
     // root->right->left->right = createNode(63);
@@ -115,15 +99,14 @@ int main() {
     // root->right->right->left = createNode(75);
     // root->right->right->right = createNode(82);
 
-    TreeNode *root = createNode(50);
-    root->left = createNode(30);
-    root->right = createNode(70);
+    // TreeNode *root = createNode(50);
+    // root->left = createNode(30);
+    // root->right = createNode(70);
 
-    root->right->left = createNode(60);
-    root->right->right = createNode(80);
+    // root->right->left = createNode(60);
+    // root->right->right = createNode(80);
 
-    root->right->right->right = createNode(81);
-    // root->right->right->left->right = createNode(82);
+    // root->right->right->right = createNode(81);
 
     inOrder(root);
     cout << "\n";
