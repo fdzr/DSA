@@ -25,3 +25,4 @@
 33. https://leetcode.com/problems/subtree-of-another-tree/description/
 34. https://leetcode.com/problems/kth-largest-sum-in-a-binary-tree/description/
 35. https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/description/
+36. https://leetcode.com/problems/longest-univalue-path/description/
