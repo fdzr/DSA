@@ -69,3 +69,16 @@ text = "abc123def456ghi"
 patter = r"(?:abc)\d+"
 matches = re.findall(patter, text)
 print(matches)
+
+
+class Test:
+    a = 1
+
+    def __init__(self, val: int):
+        self.a = val
+
+
+a = Test(3)
+print(a.a)
+Test.a = 90
+print(Test.a)
