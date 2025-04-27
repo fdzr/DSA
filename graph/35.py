@@ -15,7 +15,7 @@ def is_valid(graph: Matrix, visited: Matrix, row: int, col: int):
     )
 
 
-def dfs(graph: Matrix, visited: Matrix, row: int, col: int) -> tuple[int, ...]:
+def bfs(graph: Matrix, visited: Matrix, row: int, col: int) -> tuple[int, ...]:
     q = deque([(row, col)])
     sol: tuple[int, ...] = None
 
