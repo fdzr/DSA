@@ -1,4 +1,4 @@
-from typing import Optional
+from typing import Optional, Any
 
 
 class TreeNode:
@@ -8,7 +8,7 @@ class TreeNode:
         self.right: TreeNode = None
 
 
-def solution() -> tuple[Optional[any], int]:
+def solution() -> tuple[Optional[Any], int]:
     pass
 
 
