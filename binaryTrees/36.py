@@ -13,9 +13,11 @@ class Pack:
         self,
         value: Optional[int] = None,
         cont: int = 0,
+        max_path: Optional[int] = None,
     ):
         self.value: Optional[int] = value
         self.cont: int = cont
+        self.max_path: Optional[int] = max_path
 
 
 def solution(root: TreeNode, cont: List[int]) -> tuple[Optional[Any], int]:
