@@ -34,12 +34,16 @@ def solution(root: TreeNode, cont: List[int]) -> tuple[Optional[Any], int]:
     elif sol_left.value is None and sol_right.value is not None:
         if sol_right.value == root.val:
             pack.cont = sol_right.cont + 1
+            if sol_right.max_path is not None:
+                pack.cont = 1 + sol_right.max_path
             pack.value = root.val
         cont[0] = max(cont[0], pack.cont)
 
     elif sol_left.value is not None and sol_right.value is None:
         if sol_left.value == root.val:
             pack.cont = sol_left.cont + 1
+            if sol_left is not None:
+                pack.cont = 1 + sol_left.max_path
             pack.value = root.val
         cont[0] = max(cont[0], pack.cont)
 
