@@ -45,7 +45,8 @@ def solution(root: TreeNode, cont: List[int]) -> tuple[Optional[Any], int]:
 
     else:
         if root.val == sol_left.value and root.value == sol_right.value:
-            pass
+            pack.cont = sol_left.value + sol_right.value
+            pack.max_path = max(sol_left.cont, sol_right.cont)
         elif root.val == sol_left.value:
             pack.cont = sol_left.cont + 1
             pack.value = root.val
