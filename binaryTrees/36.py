@@ -36,36 +36,51 @@ def solution(root: TreeNode, cont: List[int]) -> tuple[Optional[Any], int]:
 
     elif sol_left.value is None and sol_right.value is not None:
         if sol_right.value == root.val:
-            pack.cont = sol_right.cont + 1
             if sol_right.max_path is not None:
-                pack.cont = 1 + sol_right.max_path
+                pack.cont = sol_right.max_path + 1
+            else:
+                pack.cont = sol_right.cont + 1
 
             cont[0] = max(cont[0], pack.cont)
 
     elif sol_left.value is not None and sol_right.value is None:
         if sol_left.value == root.val:
-            pack.cont = sol_left.cont + 1
             if sol_left.max_path is not None:
-                pack.cont = 1 + sol_left.max_path
+                pack.cont = sol_left.max_path + 1
+            else:
+                pack.cont = sol_left.cont + 1
 
             cont[0] = max(cont[0], pack.cont)
 
     else:
         if root.val == sol_left.value and root.val == sol_right.value:
-            pack.cont = sol_left.cont + sol_right.cont
-            pack.max_path = max(sol_left.cont, sol_right.cont)
+            if sol_left.max_path is None and sol_right.max_path is None:
+                pack.cont = sol_left.cont + sol_right.cont + 2
+            elif sol_left.max_path is not None:
+                pack.cont = sol_left.max_path + sol_right.cont + 2
+            elif sol_right.max_path is not None:
+                pack.cont = sol_right.max_path + sol_left.cont + 2
+            else:
+                pack.cont = sol_left.max_path + sol_right.max_path + 2
+
             cont[0] = max(cont[0], pack.cont)
+
         elif root.val == sol_left.value:
-            pack.cont = sol_left.cont + 1
+            if sol_left.max_path is not None:
+                pack.cont = sol_left.max_path + 1
+            else:
+                pack.cont = sol_left.cont + 1
 
             cont[0] = max(cont[0], pack.cont)
         elif root.val == sol_right.value:
-            pack.cont = sol_right.cont + 1
+            if sol_right.max_path is not None:
+                pack.cont = sol_right.max_path + 1
+            else:
+                pack.cont = sol_right.cont + 1
 
             cont[0] = max(cont[0], pack.cont)
 
     pack.value = root.val
-    # pack.cont = 0
 
     return pack
 
