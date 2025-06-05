@@ -56,10 +56,13 @@ def solution(root: TreeNode, cont: List[int]) -> tuple[Optional[Any], int]:
         if root.val == sol_left.value and root.val == sol_right.value:
             if sol_left.max_path is None and sol_right.max_path is None:
                 pack.cont = sol_left.cont + sol_right.cont + 2
+                pack.max_path = max()  # fill this
             elif sol_left.max_path is not None:
                 pack.cont = sol_left.max_path + sol_right.cont + 2
+                pack.max_path = max()  # fill this
             elif sol_right.max_path is not None:
                 pack.cont = sol_right.max_path + sol_left.cont + 2
+                pack.max_path = max()  # fill this
             else:
                 pack.cont = sol_left.max_path + sol_right.max_path + 2
 
