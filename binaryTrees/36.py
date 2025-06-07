@@ -8,84 +8,19 @@ class TreeNode:
         self.right: TreeNode = None
 
 
-class Pack:
-    def __init__(
-        self,
-        value: Optional[int] = None,
-        cont: int = 0,
-        max_path: Optional[int] = None,
-    ):
-        self.value: Optional[int] = value
-        self.cont: int = cont
-        self.max_path: Optional[int] = max_path
-
-    # def __repr__(self):
-    #     print(f"{self.value} - {self.cont} - {self.max_path}")
-
-
-def solution(root: TreeNode, cont: List[int]) -> tuple[Optional[Any], int]:
+def solution(root: TreeNode, cont: List[int]) -> int:
     if root is None:
-        return Pack()
+        return 0
 
     sol_left = solution(root.left, cont)
     sol_right = solution(root.right, cont)
 
-    pack = Pack()
-    if sol_left.value is None and sol_right.value is None:
-        pack.value = root.val
+    sl = sol_left + 1 if root.left and root.left.val == root.val else 0
+    sr = sol_right + 1 if root.right and root.right.val == root.val else 0
 
-    elif sol_left.value is None and sol_right.value is not None:
-        if sol_right.value == root.val:
-            if sol_right.max_path is not None:
-                pack.cont = sol_right.max_path + 1
-            else:
-                pack.cont = sol_right.cont + 1
+    cont[0] = max(cont[0], sr + sl)
 
-            cont[0] = max(cont[0], pack.cont)
-
-    elif sol_left.value is not None and sol_right.value is None:
-        if sol_left.value == root.val:
-            if sol_left.max_path is not None:
-                pack.cont = sol_left.max_path + 1
-            else:
-                pack.cont = sol_left.cont + 1
-
-            cont[0] = max(cont[0], pack.cont)
-
-    else:
-        if root.val == sol_left.value and root.val == sol_right.value:
-            if sol_left.max_path is None and sol_right.max_path is None:
-                pack.cont = sol_left.cont + sol_right.cont + 2
-                pack.max_path = max()  # fill this
-            elif sol_left.max_path is not None:
-                pack.cont = sol_left.max_path + sol_right.cont + 2
-                pack.max_path = max()  # fill this
-            elif sol_right.max_path is not None:
-                pack.cont = sol_right.max_path + sol_left.cont + 2
-                pack.max_path = max()  # fill this
-            else:
-                pack.cont = sol_left.max_path + sol_right.max_path + 2
-
-            cont[0] = max(cont[0], pack.cont)
-
-        elif root.val == sol_left.value:
-            if sol_left.max_path is not None:
-                pack.cont = sol_left.max_path + 1
-            else:
-                pack.cont = sol_left.cont + 1
-
-            cont[0] = max(cont[0], pack.cont)
-        elif root.val == sol_right.value:
-            if sol_right.max_path is not None:
-                pack.cont = sol_right.max_path + 1
-            else:
-                pack.cont = sol_right.cont + 1
-
-            cont[0] = max(cont[0], pack.cont)
-
-    pack.value = root.val
-
-    return pack
+    return max(sl, sr)
 
 
 def longestUnivaluePath(root: Optional[TreeNode]) -> int:
