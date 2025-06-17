@@ -1,6 +1,9 @@
 #include <bits/stdc++.h>
 
+#include "../common/tree.h"
+
 using namespace std;
+using namespace Tree;
 
 string ltrim(string cad) {
     cad.erase(cad.begin(), find_if(cad.begin(), cad.end(), not_fn(::isspace)));
@@ -139,179 +142,37 @@ class Test {
         a = other.a;
     }
     Test &operator=(const Test &other) {
-        cout << "calling the assignation operator ..." << "\n";\
+        cout << "calling the assignation operator ..." << "\n";
         this->setA(other.getA());
         return *this;
     }
 };
 
-template<typename T>
+template <typename T>
 concept Addable = requires(T a, T b) {
     { a + b } -> convertible_to<T>;
 };
 
-template<typename T>
+template <typename T>
 // requires Addable<T>
-T add(T a, T b){
+T add(T a, T b) {
     static_assert(Addable<T>, "Type must support addition");
     return a + b;
 }
 
+void changeValueFromNode(TreeNode *root, int value) { root->left->val = value; }
 
 int main() {
-    // vector<int> v(10, -1);
-    // v[9] = -1;
-
-    // v[4] = 9;
-    // v[5] = 9;
-    // v[6] = 9;
-
-    // v[0] = 4;
-    // v[3] = 0;
-    // v[1] = 3;
-    // v[2] = 3;
-    // v[7] = 6;
-    // v[8] = 6;
-
-    // cout<<find(3, v)<<"\n";
-
-    // for(int i = 0; i < v.size(); ++i)
-    //     cout<<i<<": "<<v[i]<<"\n";
-
-    // set<pair<int, int>> s{{7, 2}, {1, 2}, {4, 3}};
-    // for (auto elem : s)
-    // {
-    //     cout<<elem.first<<" "<<elem.second<<"\n";
-    // }
-
-    // vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8};
-    // // backtrack(0, 8, arr);
-    // vector<int> solution;
-    // int cont = 0;
-    // backtrack_2(arr, solution, cont);
-    // printf("%d", cont);
-
-    // unordered_map<int, int> um = {{3,1}};
-
-    // auto it = um.find(3);
-    // cout<<it->first;
-
-    // priority_queue<Item, vector<Item>, less<Item>> pq;
-    // pq.push(Item(3, 2, 1));
-    // pq.push(Item(3, 4, 1));
-    // pq.push(Item(2, 4, 1));
-
-    // while (!pq.empty()) {
-    //     Item item = pq.top();
-    //     pq.pop();
-    //     cout << item.a << " " << item.b << " " << item.c << "\n";
-    // }
-
-    // vector<Item> v;
-    // v.push_back(Item(3, 2, 1));
-    // v.push_back(Item(3, 4, 1));
-    // v.push_back(Item(2, 4, 1));
-
-    // sort(v.begin(), v.end());
-
-    // for (const auto &item : v) {
-    //     cout << item.a << " " << item.b << " " << item.c << "\n";
-    // }
-
-    // vector<int> a = {1,5,4,3,6};
-    // sort(a.begin(), a.end(), greater<int>());
-
-    // for(const auto& e: a)
-    //     cout<<e<<" ";
-
-    // unordered_map<string, int> um;
-    // string words[] = {"code",         "coder", "coding",   "codable",      "codec",
-    //                   "codecs",       "coded", "codeless", "codec",        "codecs",
-    //                   "codependence", "codex", "codify",   "codependents", "codes",
-    //                   "code",         sdsd"coder", "codesign", "codec", "codeveloper",
-    //                   "codrive",      "codec", "codecs",   "codiscovered"};
-
-    // for (const string &word : words) {
-    //     um[word]++;
-    // }
-
-    // priority_queue<pair<string, int>, vector<pair<string, int>>, Compare> pq;
-    // for (const auto &entry : um) {
-    //     pq.push(entry);
-    // }
-
-    // while (pq.size() > 0) {
-    //     auto item = pq.top();
-    //     cout << item.first << " " << item.second << "\n";
-    //     pq.pop();
-    // }
-
-    // priority_queue<int> pq;
-    // for(int i = 1; i <= 10; ++i)
-    //     pq.push(i);
-
-    // while(pq.size() > 1) {
-    //     int e = pq.top();
-    //     cout<< e << "\n";
-    //     pq.pop();
-    // }
-
-    // unique_ptr<Item> item = make_unique<Item>(1, 2, 3);
-    // cout << item->a;
-
-    // Test b(1);
-    // Test a = b;
-    // Test c, d(4);
-    // c = d;
-    // c.setA(15);
-    // cout<<c.getA()<<"\n";
-    // cout<<d.getA()<<"\n";
-    // d.setA(25);
-    // cout<<c.getA()<<"\n";
-    // cout<<d.getA()<<"\n";
-
-    // string a = "test";
-    // string b = "tes";
-    // bool r = (a <=> b) == 0;
-
-    // cout<< r;
-
-    // cout << add<string>("frank", " zamora");
-
-    
-
-    // cout<< same_as<vector<int>::value_type, int>;
-    // vector<string::iterator> res;
-    // string t = "test asdf";
-    // for(string::iterator p = t.begin(); p != t.end(); ++p) {
-    //     res.push_back(p);
-    // }
-
-    // for(auto ch: res)
-    //     cout<< *ch<<"\n";
-
-
-    // for(int x: ranges::iota_view(42, 52)) {
-    //     cout<< x << " ";
-    // }
-
-    // vector<int> v(5);
-    // iota(v.begin(), v.end(), 1);
-
-    // for(int e: v) cout<< e<< " ";
-
-    // tuple<int, string, int> t = make_tuple(12, "frank"s, 15);
-    // decltype(get<1>(t)) name = get<1>(t);
-    // printf("%s", name.c_str());
-
-    // optional<int> a;
-    // a = 11;
-    // cout<<a.has_value();
-
     auto t0 = chrono::system_clock::now();
     this_thread::sleep_for(1s);
     auto t1 = chrono::system_clock::now();
-    cout<<duration_cast<chrono::seconds>(t1 -t0);
+    cout << duration_cast<chrono::seconds>(t1 - t0);
+    cout << "\n";
+
+    TreeNode *root = createNode(1);
+    root->left = createNode(2);
+    changeValueFromNode(root, 67);
+    cout << root->left->val;
 
     return 0;
 }
