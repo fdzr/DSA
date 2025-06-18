@@ -1,3 +1,5 @@
+from typing import List
+
 # https://www.techiedelight.com/truncate-given-binary-tree-remove-nodes-lie-path-sum-less-k/
 
 
@@ -17,7 +19,12 @@ def pre_order(root: TreeNode):
     pre_order(root.right)
 
 
-def solution(root: TreeNode, cont: int, k: int, check_condition: bool) -> bool:
+def solution(
+    root: TreeNode,
+    cont: int,
+    k: int,
+    check_condition: List[bool],
+) -> bool:
     if root is None:
         return False
 
