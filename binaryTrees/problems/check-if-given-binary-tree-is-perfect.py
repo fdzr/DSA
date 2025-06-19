@@ -12,6 +12,27 @@ class TreeNode:
 
 def check_if_binary_tree_is_perfect(root: TreeNode):
     d = deque([root])
+    level = 0
+
+    while len(d) > 0:
+        n = len(d)
+        cont = 0
+
+        for _ in range(n):
+            nodo = d.popleft()
+            if nodo.left:
+                d.append(nodo.left)
+            if nodo.right:
+                d.append(nodo.right)
+
+            cont += 1
+
+        if cont != 2**level:
+            return False
+
+        level += 1
+
+    return True
 
 
 if __name__ == "__main__":
@@ -22,3 +43,5 @@ if __name__ == "__main__":
     root.left.right = TreeNode(5)
     root.right.left = TreeNode(6)
     root.right.right = TreeNode(7)
+
+    print(check_if_binary_tree_is_perfect(root))
