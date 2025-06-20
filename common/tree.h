@@ -6,8 +6,9 @@ using namespace std;
 
 namespace Tree {
 
+template<typename T>
 struct TreeNode {
-    int val;
+    T val;
     TreeNode *left, *right;
 };
 
@@ -22,14 +23,16 @@ class Node {
     Node(int val_, vector<Node*> _children) : val{val_}, children(_children) {}
 };
 
-TreeNode* createNode(int key) {
-    TreeNode* tmp = new TreeNode;
+template<typename T>
+TreeNode<T>* createNode(T key) {
+    TreeNode<T>* tmp = new TreeNode<T>;
     tmp->val = key;
     tmp->left = tmp->right = nullptr;
     return tmp;
 }
 
-int isLeaf(TreeNode* node) {
+template<typename T>
+int isLeaf(TreeNode<T>* node) {
     if (node == nullptr)
         return 0;
     if (node->left == nullptr && node->right == nullptr)
@@ -37,7 +40,8 @@ int isLeaf(TreeNode* node) {
     return 0;
 }
 
-void preOrder(TreeNode* root) {
+template<typename T>
+void preOrder(TreeNode<T>* root) {
     if (!root)
         return;
 
@@ -46,7 +50,8 @@ void preOrder(TreeNode* root) {
     preOrder(root->right);
 }
 
-void inOrder(TreeNode* root) {
+template<typename T>
+void inOrder(TreeNode<T>* root) {
     if (!root)
         return;
 
@@ -55,7 +60,8 @@ void inOrder(TreeNode* root) {
     inOrder(root->right);
 }
 
-void postOrder(TreeNode* root) {
+template<typename T>
+void postOrder(TreeNode<T>* root) {
     if (!root)
         return;
 
@@ -64,7 +70,8 @@ void postOrder(TreeNode* root) {
     std::cout << root->val << " ";
 }
 
-void searchKey(TreeNode* root, int key, TreeNode*& parent) {
+template<typename T>
+void searchKey(TreeNode<T>* root, int key, TreeNode<T>*& parent) {
     if (!root)
         return;
 
