@@ -2,7 +2,7 @@
 
 using namespace Tree;
 
-int findDiameter(TreeNode* root, int& cont) {
+int findDiameter(TreeNode<int>* root, int& cont) {
     if (root == nullptr) return 0;
 
     int solLeft = findDiameter(root->left, cont);
@@ -13,14 +13,14 @@ int findDiameter(TreeNode* root, int& cont) {
     return max(solLeft, solRight) + 1;
 }
 
-int solution(TreeNode* root) {
+int solution(TreeNode<int>* root) {
     int cont = 0;
     findDiameter(root, cont);
     return cont;
 }
 
 int main() {
-    TreeNode* root = createNode(1);
+    TreeNode<int>* root = createNode(1);
     root->left = createNode(2);
     root->right = createNode(3);
 
