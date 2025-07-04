@@ -2,7 +2,7 @@
 
 using namespace Tree;
 
-int solution(TreeNode* root, int& cont) {
+int solution(TreeNode<int>* root, int& cont) {
     if (root == nullptr)
         return 0;
 
@@ -23,14 +23,14 @@ int solution(TreeNode* root, int& cont) {
 
 }
 
-int longestUnivaluePath(TreeNode* root) {
+int longestUnivaluePath(TreeNode<int>* root) {
     int cont = 0;
     solution(root, cont);
     return cont;
 }
 
 int main() {
-    TreeNode* root = createNode(5);
+    TreeNode<int>* root = createNode(5);
     root->left = createNode(4);
     root->right = createNode(5);
     root->left->left = createNode(1);
