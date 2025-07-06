@@ -27,4 +27,4 @@
 35. https://leetcode.com/problems/count-nodes-equal-to-average-of-subtree/description/
 36. https://leetcode.com/problems/longest-univalue-path/description/
 37. https://leetcode.com/problems/diameter-of-binary-tree/description/
-38. https://leetcode.com/problems/convert-bst-to-greater-tree/submissions/1688778541/
+38. https://leetcode.com/problems/convert-bst-to-greater-tree/description/
