@@ -29,3 +29,4 @@
 37. https://leetcode.com/problems/diameter-of-binary-tree/description/
 38. https://leetcode.com/problems/convert-bst-to-greater-tree/description/
 39. https://leetcode.com/problems/sum-of-nodes-with-even-valued-grandparent/description/
+40. https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/description/
