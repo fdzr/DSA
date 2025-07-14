@@ -26,11 +26,11 @@ def insert(preorder: List[int], l: int, r: int) -> Optional[TreeNode]:
     index = find_index_right_subtree(preorder, l, r)
     node = TreeNode(preorder[l])
 
-    if l == r or index == -1:
+    if l == r:
         return node
 
-    node.left = insert(preorder, l + 1, index - 1)
-    node.right = insert(preorder, index, r)
+    node.left = insert(preorder, l + 1, index - 1 if index != -1 else r)
+    node.right = insert(preorder, index if index != -1 else r + 1, r)
 
     return node
 
@@ -51,4 +51,5 @@ def bstFromPreorder(preorder: List[int]) -> Optional[TreeNode]:
 
 if __name__ == "__main__":
     preorder = [8, 5, 1, 7, 10, 12]
+    # preorder = [4, 2]
     bstFromPreorder(preorder)
