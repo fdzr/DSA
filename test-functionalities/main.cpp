@@ -160,8 +160,8 @@ T add(T a, T b) {
     return a + b;
 }
 
-void changeValueFromNode(TreeNode *root, int value) { root->left->val = value; }
-void removeNode(TreeNode *&root) {
+void changeValueFromNode(TreeNode<int> *root, int value) { root->left->val = value; }
+void removeNode(TreeNode<int> *&root) {
     delete root;
     root = nullptr;
 }
@@ -172,13 +172,6 @@ int main() {
     auto t1 = chrono::system_clock::now();
     cout << duration_cast<chrono::seconds>(t1 - t0);
     cout << "\n";
-
-    TreeNode *root = createNode(1);
-    root->left = createNode(2);
-    preOrder(root);
-    cout<<"\n";
-    removeNode(root->left);
-    preOrder(root);
 
     return 0;
 }
