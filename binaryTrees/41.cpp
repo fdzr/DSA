@@ -2,48 +2,30 @@
 
 using namespace Tree;
 
-string solution(TreeNode<int> *root) {
+void solution(TreeNode<int> *root, string &cad, string &answer) {
     if (root == nullptr) {
-        return "";
+        return;
     }
 
-    string leftSolution = solution(root->left);
-    string rightSolution = solution(root->right);
+    cad += static_cast<char>(root->val + 97);
 
-    if (leftSolution == "" && rightSolution == "")
-        return string{static_cast<char>(root->val + 97)};
-
-    if (leftSolution != "" && rightSolution == "") {
-        return leftSolution + string{static_cast<char>(root->val + 97)};
+    if (root->left == nullptr && root->right == nullptr) {
+        reverse(cad.begin(), cad.end());
+        answer = (answer == "") ? cad : min(cad, answer);
+        reverse(cad.begin(), cad.end());
     }
 
-    if (rightSolution != "" && leftSolution == "") {
-        return rightSolution + string{static_cast<char>(root->val + 97)};
-    }
+    solution(root->left, cad, answer);
+    solution(root->right, cad, answer);
 
-    string solutionRight, solutionLeft, finalSolution;
-    solutionRight = rightSolution + string{static_cast<char>(root->val + 97)};
-    solutionLeft = leftSolution + string{static_cast<char>(root->val + 97)};
-
-    if (leftSolution > rightSolution) {
-        if (solutionRight < solutionLeft)
-            finalSolution = solutionRight;
-        else
-            finalSolution = solutionLeft;
-
-    } else {
-        if (solutionLeft < solutionRight)
-            finalSolution = solutionLeft;
-        else {
-            finalSolution = solutionRight;
-        }
-    }
-
-    return finalSolution;
+    cad.pop_back();
 }
 
 string smallestFromLeaf(TreeNode<int> *root) {
-    return solution(root);
+    string answer = "", temp = "";
+    solution(root, temp, answer);
+
+    return answer;
 }
 
 int main() {
