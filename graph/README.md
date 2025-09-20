@@ -32,3 +32,4 @@
 32. https://leetcode.com/problems/maximum-number-of-fish-in-a-grid/description/
 34. https://www.techiedelight.com/total-paths-in-digraph-from-source-to-destination-m-edges/
 35. https://leetcode.com/problems/find-all-groups-of-farmland/description/
+36. https://leetcode.com/problems/count-the-number-of-complete-components/description/?envType=problem-list-v2&envId=graph
