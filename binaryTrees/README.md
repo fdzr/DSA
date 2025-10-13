@@ -31,3 +31,4 @@
 39. https://leetcode.com/problems/sum-of-nodes-with-even-valued-grandparent/description/
 40. https://leetcode.com/problems/construct-binary-search-tree-from-preorder-traversal/description/
 41. https://leetcode.com/problems/smallest-string-starting-from-leaf/description/?envType=problem-list-v2&envId=tree
+42. https://leetcode.com/problems/path-sum-ii/description/?envType=problem-list-v2&envId=depth-first-search
