@@ -82,3 +82,15 @@ a = Test(3)
 print(a.a)
 Test.a = 90
 print(Test.a)
+
+
+class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+
+l = ListNode(-1)
+b = l
+l.next = ListNode(-2)
+print(b.val, b.next.val)
