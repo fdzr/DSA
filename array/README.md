@@ -186,3 +186,4 @@
 203. https://leetcode.com/problems/merge-two-sorted-lists/description/
 204. https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/description/
 205. https://leetcode.com/problems/n-repeated-element-in-size-2n-array/description/?envType=daily-question&envId=2026-01-02
+206. https://leetcode.com/problems/swap-nodes-in-pairs/description/
