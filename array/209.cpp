@@ -31,7 +31,7 @@ bool dfs(const MATRIX<char>& m, MATRIX<bool>& visited, int row, int col, string 
             }
 
             visited[newRow][newCol] = false;
-            
+            --index;
 
         }
     }
